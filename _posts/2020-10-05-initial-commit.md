@@ -3,7 +3,7 @@ layout: post
 slug: initial commit
 ---
 
-This is mostly just here for the pun. I, however, have to admit that I'm deceived[^2] you[^1], as this is far from the initial commit of this blog. Turns out setting up jekyll is much more painful than I thought. I also took upwards of 8 hours just to get github to hand out a certificate for [blog.mtib.dev](https://blog.mtib.dev), though I really appreciate Github-Pages still to be a thing.
+This is mostly just here for the pun. I, however, have to admit that I have deceived[^2] you[^1], as this is far from the initial commit of this blog. Turns out setting up jekyll is much more painful than I thought. I also took upwards of 8 hours just to get github to hand out a certificate for [blog.mtib.dev](https://blog.mtib.dev), though I really appreciate Github-Pages still to be a thing.
 
 ---
 {: data-content="committing"}
