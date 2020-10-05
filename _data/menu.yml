@@ -7,7 +7,7 @@ entries:
         url: https://github.com/mtib
       - title: gitea
         url: https://mtib.dev/mtib
-  - title: thoughts
+  - title: entries
     post_list: true
     url: false
     entries: false
