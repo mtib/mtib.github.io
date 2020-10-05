@@ -2,6 +2,7 @@ title: blog.mtib.dev
 author: Markus Becker
 email: mtib.becker@gmail.com
 url: https://blog.mtib.dev
+favicon: "./m_arrow.png" 
 description: > # description of the site (multiple lines allowed)
     Starting to write a blog is hard, but here's a try.
 remote_theme: riggraz/no-style-please
