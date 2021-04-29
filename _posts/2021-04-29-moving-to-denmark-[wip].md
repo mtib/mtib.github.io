@@ -1,6 +1,6 @@
 ---
 layout: post
-slug: just linux things
+slug: moving-de-to-dk
 ---
 
 I am moving to Denmark from Germany. This Blogpost is made to document everything I did and had to do for that. I'll try to document it chronologically, though there might be some jumps in time for clarity.
