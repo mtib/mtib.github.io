@@ -3,9 +3,11 @@ layout: post
 slug: just linux things
 ---
 
-I am moving to Denmark from Germany. This Blogpost is made to document everything I did and had to do for that. I'll try to document it chronologically, though there might be some jumps in time for clarity
+I am moving to Denmark from Germany. This Blogpost is made to document everything I did and had to do for that. I'll try to document it chronologically, though there might be some jumps in time for clarity.
 
-## Way early
+While I will write up text for every step, if you're just interested in the itemized list of steps I undertook [look here](#protocol)
+
+## way early
 
 For context, I've somehow got into the situation of having a danish girlfriend whilst living in the middle of Germany. While that relationship wasn't to last, the impression Denmark left on me was. We're still good friends, which actually will come in handy for the move. While I cannot give a good Checklist on how to do so, I strongly recommend knowing someone from Denmark to learn about how they do things. A good place to start might be the [Danish Language Discord Server](https://www.reddit.com/r/danishlanguage/comments/5ly689/discord_server_for_learning_danish_and_english/), they also host community driven classes and share learning material. Which leads onto the topic of language. I *tried* to learn Danish. One Problem with that is that Danes, especially the younger generations, are exceptional at English, to the point that I basically lived at my Girlfriend's place for what amounts to around 1 year, without having the need to speak Danish at all.
 
@@ -19,6 +21,8 @@ For context, I've somehow got into the situation of having a danish girlfriend w
 ## planning the move
 
 I set up a list of things I had to cancel, register and institutions to notify of my move. One important thing to note is that, because I hold a passport of an EU member state, I am allowed to stay in Denmark for up to 6 months without having to register for a [residency permit (ICS Checklist)](https://lifeindenmark.borger.dk/housing-and-moving/ics-international-citizen-service). Before you plan anything else I recommend browsing the [official german brochure](https://www.bva.bund.de/SharedDocs/Downloads/DE/Aufgaben/ZMV/Auswandern/Publikationen/Basiswissen_fuer_Ihren_Schritt_ins_Ausland.pdf?__blob=publicationFile&v=5) for moving into another European country.
+
+You should also be aware that the rent as well as security / up-front payments for renting property are a lot higher in Denmark compared to Germany.
 
 ### danish side
 
@@ -49,7 +53,7 @@ I'm planning to allow myself some overlap, partially because of the current pand
     - Your Insurances
     - *Your health-insurance*
         - It seems most german health-insurances will just cover things that happen in the EU without extra charges, the expensive packages you can book only include *free transport back to germany*, which, if you moved to Denmark, you probably won't need. Once you have a CPR number you're covered by the Danish health-insurance and won't need your native one anymore.
-        - Also! Danish health-insurance **doesn't** cover dentisty, so get your teeth fixed before moving.
+        - Also! Danish health-insurance **doesn't** cover dentistr, so get your teeth fixed before moving.
 1. De-register current residence
     - Just a simple visit to the *Einwohnermeldeamt*, to tell them you're no longer going to be living there, can be done up to 1 week before the move, and 2 weeks after the move.
 
@@ -60,3 +64,20 @@ TODO: this hasn't happened yet
 ## job search
 
 TODO: this hasn't happened yet
+
+## protocol
+
+- 2021-01-xx
+    - Start making a list of resources by googling and reading guides
+- 2021-04-09
+    - Start (premium) Danish-Duolingo course with maxed out daily goals without missing a day
+- 2021-04-17
+    - Drive to Denmark undertaking necessary Covid tests and isolate at a friend's
+    - Start looking for flats on [Boligportal](https://www.boligportal.dk/lejeboliger), set up search agent, pay the extremely expensive 2-months membership fee
+- 2021-04-25
+    - Start looking at [OdenseBolig](https://www.odensebolig.dk/) for flats for free!
+- 2021-04-28
+    - Talk to landlord of friend about flats and get first-choice on a flat (2800DKK warm+el, 24m^2) that's currently being renovated
+- 2021-04-29
+    - Start writing a blog about moving to Denmark
+    - Decide to take flat offered by landlord to establish a *base* in Denmark (considering Covid is a thing and entry could become impossible at any time)
