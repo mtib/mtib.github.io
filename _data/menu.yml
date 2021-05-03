@@ -7,6 +7,8 @@ entries:
         url: https://github.com/mtib
       - title: gitea
         url: https://mtib.dev/mtib
+      - title: linkedin
+        url: https://www.linkedin.com/in/mtib/
   - title: entries
     post_list: true
     url: false

@@ -81,3 +81,9 @@ TODO: this hasn't happened yet
 - 2021-04-29
     - Start writing a blog about moving to Denmark
     - Decide to take flat offered by landlord to establish a *base* in Denmark (considering Covid is a thing and entry could become impossible at any time)
+- 2021-04-30
+    - Had call about flat
+- 2021-05-01
+    - Cancel existing rent-contract
+- 2021-05-03
+    - Old landlord responds to request to cancel but disagrees on deadline
