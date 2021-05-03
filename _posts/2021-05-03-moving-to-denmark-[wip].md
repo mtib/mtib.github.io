@@ -57,6 +57,12 @@ I'm planning to allow myself some overlap, partially because of the current pand
 1. De-register current residence
     - Just a simple visit to the *Einwohnermeldeamt*, to tell them you're no longer going to be living there, can be done up to 1 week before the move, and 2 weeks after the move.
 
+## canceling rent
+
+This should have been an easy E-Mail, but my landlord decided to want an additional month of rent from me, which I argue they have no right to require. The rent contract just references the [BGB](https://www.gesetze-im-internet.de/bgb/__573c.html#:~:text=%C2%A7%20573c%20Fristen%20der%20ordentlichen,Wohnraums%20um%20jeweils%20drei%20Monate.). As I wrote on the 1.5.2021 I should be able to count three months as follows: May, June, July, and, therefore, be able to end the contract for the 31.7.2021.
+
+I also offered the landlord to buy the washing machine straight off of me, instead of me selling it to the rentor after me.
+
 ## moving
 
 TODO: this hasn't happened yet
@@ -83,7 +89,13 @@ TODO: this hasn't happened yet
     - Decide to take flat offered by landlord to establish a *base* in Denmark (considering Covid is a thing and entry could become impossible at any time)
 - 2021-04-30
     - Had call about flat
+        - 2800 DKK for flat+el
+        - 450 DKK for warm, with yearly return of unused warm
 - 2021-05-01
     - Cancel existing rent-contract
+    - Set most of my furniture for sale on [ebay-kleinanzeigen](https://ebay-kleinanzeigen.de/)
+- 2021-05-02
+    - Call with family, planning to move beginning of June with two cars
 - 2021-05-03
     - Old landlord responds to request to cancel but disagrees on deadline
+    - Connect with everyone I know on [linkedin](https://www.linkedin.com/in/mtib/)
