@@ -16,7 +16,7 @@ And most importantly no RSS feed for vacancies!
 
 ## Solution
 
-I made an [RSS Feed](mtib.dev/sdu-open.xml), which you can subscribe to for free, to track both publication dates and get an overview without having to deal with the sub-par website experience. The code is open-sourced on github, [have a look](https://github.com/mtib/sdu_openrss).
+I made an [RSS Feed](https://mtib.dev/sdu-open.xml), which you can subscribe to for free, to track both publication dates and get an overview without having to deal with the sub-par website experience. The code is open-sourced on github, [have a look](https://github.com/mtib/sdu_openrss).
 
 ## Open Problems
 
