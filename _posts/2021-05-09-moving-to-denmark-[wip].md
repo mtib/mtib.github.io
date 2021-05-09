@@ -18,7 +18,7 @@ For context, I've somehow got into the situation of having a danish girlfriend w
 - [Duolingo](https://www.duolingo.com/learn)
     - While there are other (free) resources, I prefer the gamified way to learn vocabulary (which is all you can expect from duolingo)
 
-## planning the move
+## planning
 
 I set up a list of things I had to cancel, register and institutions to notify of my move. One important thing to note is that, because I hold a passport of an EU member state, I am allowed to stay in Denmark for up to 6 months without having to register for a [residency permit (ICS Checklist)](https://lifeindenmark.borger.dk/housing-and-moving/ics-international-citizen-service). Before you plan anything else I recommend browsing the [official german brochure](https://www.bva.bund.de/SharedDocs/Downloads/DE/Aufgaben/ZMV/Auswandern/Publikationen/Basiswissen_fuer_Ihren_Schritt_ins_Ausland.pdf?__blob=publicationFile&v=5) for moving into another European country.
 
@@ -42,6 +42,40 @@ The checklist outlines the main things one has to apply for when wanting to stay
 
 Also, an honourable mention. If you own a car and plan to drive it in denmark, you can import it (which will be expensive), but also be aware that if you plan to drive between Germany and Sjælland (the big island with Kopenhagen on it) that there is no *free* way onto that island. You can take a toll bridge from Sweden, you can take a nice ferry from Rostock to Gedser for ~60-120€, take a worse ferry from Puttgarden to Rødby for the same kinda price or take the Storebælt-Bridge between Fyn and Sjælland for ~200DKK (25€) after a Signup with [BroBizz](https://brobizz.com/). They are currently working on [a tunnel](https://femern.com/en) but it will also have fees, which are not announced yet, at the time of writing.
 
+#### CPR number
+
+Having had another look at [my options](https://lifeindenmark.borger.dk/housing-and-moving/ics-international-citizen-service/ics-south-in-odense), I am considering to get a CPR temporarily earlier in one of two ways:
+
+1. self-sufficient funds (savings + own income)
+    - I have seen [discussion online](https://www.reddit.com/r/copenhagen/comments/k1gkbw/is_there_anyone_who_had_to_prove_they_have/) that ICS wants you to have access to about ~800€ per month to get a residency permit for a limited amount of time. While I currently have only saved up around 2000€, I am able to show that I have pre-paid rent for three months (as part of the deposit) and have a general income surplus of around 400€ (after rent). Hoping that the ICS can recognize this as self-sufficient for up to 6 months, I would hopefully be able to get the *reason for residency permit* changed to a work permit by November.
+1. self-sufficient funds (vouching danish person)
+    - I know who I could ask, but I would rather not
+
+#### ordering
+
+As my move approaches, the order in which I want to get things is changing.
+
+I will rather quickly need to get internet and phone number. I have decided to go with oister.dk for now, as they service the area I will be in, and I have so far not heard anything bad about them. They offer a seemingly quite good [phone plan](https://www.oister.dk/mobilabonnement/oister-mobil-fri-tale-10-gb/) for 79DKK/month and a [mobile wifi](https://www.oister.dk/internet/oister-wifi/) plan for 229DKK/month. I played with the idea of just getting a phone plan and two sim cards for it, thus saving the 229DDK/month, but I like hosting some of my data as well as being able to port-forward for gaming, which is impossible/a hassle with phone hotspots. While the wifi plan is quite a downgrade from my current plan as it is only a 4G/LTE router, being able to move with it is very nice, as I plan to move as soon as I am able to afford a bigger flat, the phone plan will be quite an upgrade for me, as I am currently on a terrible Vodafone DE plan.
+
+However, I would like to have internet and phone already be paid from a danish bank account if possible. This way I would avoid surprising surcharges due to conversions (which I am currently experiencing sometimes). This would mean I need to get a bank account first, which should be possible as I am able to prove that I have permanent residence in Denmark. While it seems possible to open a bank account in Denmark without a CPR number it seems discouraged, especially as I will also not have a Danish employer for the first few months. A possible bank is [Lån & Spar](https://www.lsb.dk/), I have written them a ticket with my exact situation, awaiting response.
+
+Ideally, to fit my needs this order would be ideal:
+
+1. Bank account
+1. Internet & phone plan (danish bank)
+1. CPR number
+1. NemID/NemKonto
+1. Tax card
+
+However, I might need to aim for:
+
+1. Internet & phone plan (german bank)
+1. CPR number
+1. Tax card
+1. Bank account
+1. NemID/NemKonto
+
+
 ### german side
 
 I'm planning to allow myself some overlap, partially because of the current pandemic and partially because the flat I ended up finding was too good an offer to not take waaay to early.
@@ -62,6 +96,10 @@ I'm planning to allow myself some overlap, partially because of the current pand
 This should have been an easy E-Mail, but my landlord decided to want an additional month of rent from me, which I argue they have no right to require. The rent contract just references the [BGB](https://www.gesetze-im-internet.de/bgb/__573c.html#:~:text=%C2%A7%20573c%20Fristen%20der%20ordentlichen,Wohnraums%20um%20jeweils%20drei%20Monate.). As I wrote on the 1.5.2021 I should be able to count three months as follows: May, June, July, and, therefore, be able to end the contract for the 31.7.2021.
 
 I also offered the landlord to buy the washing machine straight off of me, instead of me selling it to the rentor after me.
+
+### "Abmeldung bei Meldebehörde"
+
+Needs to be 1W before or 2W after *your move*. As I will be moving a lot sooner than my rent contract *expires* I will have to choose when to send in my "Antrag auf Abmeldung bei Meldebehörde". A reason for doing this as soon as possible is that the document you get in response is required to cancel internet contracts ahead of term.
 
 ## moving
 
@@ -99,3 +137,6 @@ TODO: this hasn't happened yet
 - 2021-05-03
     - Old landlord responds to request to cancel but disagrees on deadline
     - Connect with everyone I know on [linkedin](https://www.linkedin.com/in/mtib/)
+- 2021-05-09
+    - Planning to move on 3.6.2021, schedule to be finalized soon
+    - Written to Lån & Spar about getting bank account before getting CPR number
