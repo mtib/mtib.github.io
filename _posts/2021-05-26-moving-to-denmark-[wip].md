@@ -158,3 +158,6 @@ TODO: this hasn't happened yet
 - 2021-05-20
     - Asking my most wealthy danish friend to sign me as their dependent for getting access to a CPR number before working
     - I start worrying if I had too little time to look around in the flat, what if I hate the [toilet](https://www.google.com/search?q=german+toilets&oq=german+toilets&aqs=chrome..69i57j46i175i199i395i422i424j0j0i395j0j0i395l4.2035j1j7&sourceid=chrome&ie=UTF-8).
+- 2021-05-26
+  - Ordered post-redirection from old german flat to new german flat with [Deutsche Post](https://shop.deutschepost.de/nachsendeservice-beauftragen)
+  - Canceled power contract for move on 3.6.2021. Due to the minimum term of two weeks, it will officially end on 9.6.2021.
