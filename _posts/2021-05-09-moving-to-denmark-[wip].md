@@ -20,7 +20,7 @@ For context, I've somehow got into the situation of having a danish girlfriend w
 
 ## Planning
 
-I set up a list of things I had to cancel, register and notify institutions of my move. One important thing to note is that, because I hold a passport of an EU member state, I am allowed to stay in Denmark for up to 6 months without having to register for a [residency permit (ICS Checklist)](https://lifeindenmark.borger.dk/housing-and-moving/ics-international-citizen-service). Before you plan anything else, I recommend browsing the [official german brochure](https://www.bva.bund.de/SharedDocs/Downloads/DE/Aufgaben/ZMV/Auswandern/Publikationen/Basiswissen_fuer_Ihren_Schritt_ins_Ausland.pdf?__blob=publicationFile&v=5) for moving into another European country.
+I set up a list of things I had to cancel, register and notify institutions of my move. One important thing to note is that, because I hold a passport of an EU member state, I am allowed to stay in Denmark for up to 6 months without having to register for a [residency permit (ICS Checklist)](https://lifeindenmark.borger.dk/housing-and-moving/ics-international-citizen-service). Before you plan anything else, I recommend browsing the [official german brochure](https://www.bva.bund.de/SharedDocs/Downloads/DE/Aufgaben/ZMV/Auswandern/Publikationen/Basiswissen_fuer_Ihren_Schritt_ins_Ausland.pdf?__blob=publicationFile&v=5) for moving into another European country. While ordering the post-redirection, I came across their great resource for moving: [moving checklist](https://shop.deutschepost.de/shop/nachsenden-lagern/individuelle_checkliste_umzug.pdf).
 
 You should also be aware that the rent, as well as security and up-front payments for renting any property, are a lot higher in Denmark than in Germany.
 
