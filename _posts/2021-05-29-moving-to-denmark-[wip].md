@@ -161,3 +161,10 @@ TODO: this hasn't happened yet
 - 2021-05-26
   - Ordered post-redirection from old german flat to new german flat with [Deutsche Post](https://shop.deutschepost.de/nachsendeservice-beauftragen)
   - Canceled power contract for move on 3.6.2021. Due to the minimum term of two weeks, it will officially end on 9.6.2021.
+- 2021-05-29
+  - Made an appointment for the residency permit (and CPR number?)
+    - **This should have happened much earlier!**
+  - Found out that the internet and phone subscription from oister.dk required NemID.
+    - If I didn't have the possibility of stealing WiFi this could have been catastrophic.
+  - Found out that NemID requires a CPR number or residency permit.
+  - Found out that I cannot log into my "IKK Onlinefiliale", so I requested a one-time password. I could have realized this much earlier.
