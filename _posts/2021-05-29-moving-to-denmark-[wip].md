@@ -30,11 +30,15 @@ On the Danish side, you will have to contact the closest [ICS](https://lifeinden
 
 The checklist outlines the main things one has to apply for when wanting to stay over six months:
 
+1. Residency permit
+    - Check with your ICS what you need for this. 
 1. CPR Number
+    - Requires residency permit but can be ordered on the same day.
     - You will not be health insured unless you have this! (I think).
 1. Tax Card
-    - Need this to work (but also need a [signed contract](https://skat.dk/skat.aspx?oid=2274194) to get it).
+    - Need this to work and pay taxes (but also need a [signed contract](https://skat.dk/skat.aspx?oid=2274194) to get it).
 1. NemID / NemKonto
+    - Requires CPR number or residency permit.
     - Similar to the new German Passport's online features, but linked to a bank account instead.
     - WIP: I'm still not sure how I'm going to do this. I think I'll get a Danish bank account and designate that as my NemKonto, but technically assigning my current German bank should also be possible.
 1. A-Konto
@@ -105,7 +109,7 @@ I also offered the landlord to buy the washing machine straight off of me becaus
 
 #### Notice of Departure
 
-The *Abmeldung bei der Meldebehörde* has to be handed in one week before or up to two weeks after *your move*. A reason for doing this early is that the document you get in response is required to cancel internet contracts ahead of term.
+The *Abmeldung bei der Meldebehörde* should be handed in one week before or up to two weeks after *your move*. A reason for doing this early is that the document you get in response is required to cancel internet contracts ahead of term.
 
 ## Moving
 
@@ -128,7 +132,7 @@ TODO: this hasn't happened yet
     - Start (premium) Danish-Duolingo course with maxed out daily goals without missing a day
 - 2021-04-17
     - Drive to Denmark undertaking necessary Covid tests and isolate at a friend's
-    - Start looking for flats on [Boligportal](https://www.boligportal.dk/lejeboliger), set up a search agent, pay the unusually expensive 2-months membership fee
+    - Start looking for flats on [Boligportal](https://www.boligportal.dk/lejeboliger), set up a search agent, pay the expensive 2-months membership fee
 - 2021-04-25
     - Start looking at [OdenseBolig](https://www.odensebolig.dk/) for flats for free!
 - 2021-04-28
@@ -161,10 +165,12 @@ TODO: this hasn't happened yet
 - 2021-05-26
   - Ordered post-redirection from old german flat to new german flat with [Deutsche Post](https://shop.deutschepost.de/nachsendeservice-beauftragen)
   - Canceled power contract for move on 3.6.2021. Due to the minimum term of two weeks, it will officially end on 9.6.2021.
+- 2021-05-27
+  - Made an E-Post account to send letters within Germany for internal postage prices.
 - 2021-05-29
   - Made an appointment for the residency permit (and CPR number?)
     - **This should have happened much earlier!**
   - Found out that the internet and phone subscription from oister.dk required NemID.
-    - If I didn't have the possibility of stealing WiFi this could have been catastrophic.
+    - If I didn't have the possibility of stealing WIFI, this could have been catastrophic.
   - Found out that NemID requires a CPR number or residency permit.
-  - Found out that I cannot log into my "IKK Onlinefiliale", so I requested a one-time password. I could have realized this much earlier.
+  - Found out that I cannot log into my "IKK Onlinefiliale," so I requested a one-time password. I could have realized this much earlier.
