@@ -168,7 +168,7 @@ TODO: this hasn't happened yet
 - 2021-05-27
   - Made an E-Post account to send letters within Germany for internal postage prices.
 - 2021-05-29
-  - Made an appointment for the residency permit (and CPR number?)
+  - Made an appointment for the residency permit (and CPR number?) on 24.06.2021.
     - **This should have happened much earlier!**
   - Found out that the internet and phone subscription from oister.dk required NemID.
     - If I didn't have the possibility of stealing WIFI, this could have been catastrophic.
