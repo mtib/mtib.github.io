@@ -1,0 +1,39 @@
+digraph dk_deps {
+    graph [bgcolor = "white"]
+    node [style="filled"; fillcolor="white"]
+
+    "MobilePay" -> "DK Phone";
+    "Internet" -> "NemID";
+    "DK Phone" -> "NemID";
+    "NemKonto" -> {"NemID"; "Bank Account"; "Skat Card";};
+    "Skat Card" -> {"ID"; "Signed Contract\n<30days old"};
+    "NemID" -> {"CPR Number"; "Bank Account"} [arrowhead=ediamond];
+    "Bank Account" -> {"CPR Number"; "ID"};
+    "CPR Number" -> {"Residency Permit"; "ID"; "15 Years old";  "Passport Photo"};
+    "Permanent Residency" -> {"Residency Permit"; "5 Year stay"};
+    "Residency Permit" -> {"OD1 Form"; "ID"; "Passport Photo"};
+    "OD1 Form" -> {"Job"; "Student"; "Self-sufficient"} [arrowhead=ediamond];
+    "OD1 Form" -> "Danish Address";
+    "Self-sufficient" -> {"decl-dk"; "Savings ~80k DKK"} [arrowhead=ediamond];
+    "Job" -> {"Signed Contract\n<30days old"; "Declaration\nfrom Employer"} [arrowhead=ediamond];
+
+    "15 Years old", "ID", "Passport Photo", "OD1 Form", "Danish Address", "Self-sufficient" [fillcolor="#bbffbb", style="filled"];
+    "decl-dk" [label="Declaration\nfrom Danish person", fillcolor="#bbffbb", style="filled"];
+
+subgraph cluster_01 {
+    label = "Legend";
+    node [shape=point]
+    {
+        rank=same
+        d0 [style = invis];
+        d1 [style = invis];
+        p0 [style = invis];
+        p1 [style = invis];
+        s0 [style = invis];
+        s1 [style = invis];
+    }
+    d0 -> d1 [label=any arrowhead=ediamond]
+    s0 -> s1 [label=all]
+}
+
+}
