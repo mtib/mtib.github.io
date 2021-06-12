@@ -176,3 +176,7 @@ TODO: this hasn't happened yet
   - Found out that I cannot log into my "IKK Onlinefiliale," so I requested a one-time password. I could have realized this much earlier.
 - 2021-05-30
   - I started maintaining a [directed graph of dependencies](/assets/misc/dk-deps.png).
+- 2021-06-03
+  - I move to Denmark
+- 2021-06-11
+  - I am told to sign up to PBS to pay rent, which requires NemID and a Danish bank account
