@@ -180,3 +180,11 @@ TODO: this hasn't happened yet
   - I move to Denmark
 - 2021-06-11
   - I am told to sign up to PBS to pay rent, which requires NemID and a Danish bank account
+- 2021-06-24
+  - Appointment at ICS
+    - Hand in the application for a residency permit
+    - Did not accept the proof of fund (employer written letter), requesting either the exact form or a bank statement
+  - Handed in the requested and missing bank statement online immediately when I arrived back home
+- 2021-07-08
+  - Stand of today: I have not received any update from ICS (written or E-Mail), except for the confirmation of receiving my additional documentation.
+  - The chain of requirements: Residency permit $\rightarrow$ CPR $\rightarrow$ NemID $\rightarrow$ {Bank $\rightarrow$ PBS, Internet, Phone} means that I am very dependent on my contacts here to perform my function in my job. I also need to be grateful for my landlord accepting (Euro!) bank transactions in place of the PBS transfers.
