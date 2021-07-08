@@ -185,6 +185,8 @@ TODO: this hasn't happened yet
     - Hand in the application for a residency permit
     - Did not accept the proof of fund (employer written letter), requesting either the exact form or a bank statement
   - Handed in the requested and missing bank statement online immediately when I arrived back home
+  - Getting physical appointments at the general Borgerservice Odense requires a Danish phone number. Oister requires NemID and NetTalk (Netto's prepaid service), requires a CPR number for activation.
+    - However, there seems to be an [online form](https://www2.borgeronline.dk/461/dl0460ff?lang=en-US) for requesting a CPR number, provided a scanned residency permit is attached.
 - 2021-07-08
   - Stand of today: I have not received any update from ICS (written or E-Mail), except for the confirmation of receiving my additional documentation.
   - The chain of requirements: Residency permit → CPR → NemID → {Bank → PBS, Internet, Phone} means that I am very dependent on my contacts here to perform my function in my job. I also need to be grateful for my landlord accepting (Euro!) bank transactions in place of the PBS transfers.
