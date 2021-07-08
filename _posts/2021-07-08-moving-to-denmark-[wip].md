@@ -187,4 +187,4 @@ TODO: this hasn't happened yet
   - Handed in the requested and missing bank statement online immediately when I arrived back home
 - 2021-07-08
   - Stand of today: I have not received any update from ICS (written or E-Mail), except for the confirmation of receiving my additional documentation.
-  - The chain of requirements: Residency permit $\rightarrow$ CPR $\rightarrow$ NemID $\rightarrow$ {Bank $\rightarrow$ PBS, Internet, Phone} means that I am very dependent on my contacts here to perform my function in my job. I also need to be grateful for my landlord accepting (Euro!) bank transactions in place of the PBS transfers.
+  - The chain of requirements: Residency permit → CPR → NemID → {Bank → PBS, Internet, Phone} means that I am very dependent on my contacts here to perform my function in my job. I also need to be grateful for my landlord accepting (Euro!) bank transactions in place of the PBS transfers.
