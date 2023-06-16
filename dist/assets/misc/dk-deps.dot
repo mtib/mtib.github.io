@@ -1,0 +1,56 @@
+digraph dk_deps {
+    graph [bgcolor = "white"]
+    node [style="filled"; fillcolor="white"]
+
+    "Betalingservice" -> {"NemID", "Bank Account"}
+    "MobilePay" -> {"DK Phone"; "Bank Account";};
+    "Internet" -> {"NemID"; "CPR Number"};
+    "DK Phone" -> {"NemID"; "CPR Number"};
+    "NemKonto" -> {"NemID"; "Bank Account";};
+    "Skat Card" -> {"EU ID"; "Signed Contract\n<30days old"};
+    "NemID" -> {"CPR Number"; "Bank Account";} [arrowhead=ediamond];
+    "NemID" -> "EU ID";
+    "Bank Account" -> {"CPR Number"; "EU ID"};
+    "CPR Number" -> {"Residency Permit"; "EU ID"; "Passport Photo"};
+    "Permanent Residency" -> {"Residency Permit"; "5 Year stay"};
+    "Residency Permit" -> {"OD1 Form"; "EU ID"; "Passport Photo"};
+    "OD1 Form" -> {"DK Job"; "Student"; "Self-sufficient"} [arrowhead=ediamond];
+    "OD1 Form" -> "Danish Address";
+    "Self-sufficient" -> {"decl-dk"; "Savings\n~80k DKK"} [arrowhead=ediamond];
+    "DK Job" -> {"Signed Contract\n<30days old"; "Declaration\nfrom Employer"} [arrowhead=ediamond];
+    "DK Job" -> {"Finish Studying"; "Skat Card"};
+
+    "EU ID", "Passport Photo", "OD1 Form", "Danish Address", "Self-sufficient" [fillcolor="#bbffbb", style="filled"];
+    "decl-dk" [label="Declaration\nfrom Danish person", fillcolor="#bbffbb", style="filled"];
+
+    subgraph cluster_01 {
+        label = "Legend";
+
+        node [shape=point]
+        {
+            rank=same
+            d0 [style = invis];
+            d1 [style = invis];
+            p0 [style = invis];
+            p1 [style = invis];
+            s0 [style = invis];
+            s1 [style = invis];
+        }
+        d0 -> d1 [label=any arrowhead=ediamond]
+        s0 -> s1 [label=all]
+    }
+
+    "Cancel O2" -> {"Abmeldung"; "Danish Address";};
+    {"Cancel Power"; "Abmeldung"} -> "Cancel DE Rent";
+    "Cancel DE Rent";
+    "Residency Permit" [fillcolor="#bbffbb", style="filled"];
+    "CPR Number" [fillcolor="#bbffbb", style="filled"];
+    
+    "Cancel O2" [fillcolor="#bbffbb", style="filled"];
+
+    "Abmeldung" [fillcolor="#bbffbb", style="filled"];
+    "Cancel Power" [fillcolor="#bbffbb", style="filled"];
+    "Cancel DE Rent" [fillcolor="#bbffbb", style="filled"];
+    "Cancel DE Health-Insurance" -> {"End DE Job"; "Finish Studying"};
+    "Finish Studying" -> "End DE Job";
+}
