@@ -1,0 +1,2 @@
+Similar to the [SDU vacancies RSS](/?post=2021-05-06-sdu-vacancies-rss.md) I made an RSS feed for the open PhD positions at ITU: [https://mtib.dev/itu-open.xml](https://mtib.dev/itu-open.xml). Feel free to subscribe using the RSS reader of your choice.
+The code is open source and easy to run yourself: [itu_openrss](https://github.com/mtib/itu_openrss).

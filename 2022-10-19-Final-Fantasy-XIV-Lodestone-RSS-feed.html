@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>2022 10 19 Final Fantasy XIV Lodestone RSS feed</title>
+        <link rel="canonical" href="https://blog.mtib.dev/#2022-10-19-Final-Fantasy-XIV-Lodestone-RSS-feed" />
+        <style>body, :root {background-color: black; color: white;}</style>
+        <meta http-equiv="Refresh" content="0; url='https://blog.mtib.dev/#2022-10-19-Final-Fantasy-XIV-Lodestone-RSS-feed'" />
+    </head>
+    <body><p>I wanted a better way to stay up to date on Final Fantasy XIV news without remembering to go to their news sites.
+I use <a href="https://en.wikipedia.org/wiki/RSS">RSS Feeds</a>, that I check daily anyways (Reeder on MacOS to be specific).</p>
+<p><img src="../assets/misc/ffxiv-reeder1.png" alt="">
+<img src="../assets/misc/ffxiv-reeder2.png" alt=""></p>
+<p>The feeds contain the subjects, release date and short description for current events.
+If the news page change too much these feeds might temporarily break.
+In case that happens, or in case anyone has improvement ideas, I am happy to accept PRs on <a href="https://github.com/mtib/ffxiv-lodestone-rss">GitHub</a> (TypeScript).</p>
+<p>The RSS feeds are available at <a href="https://feeds.mtib.dev/na.finalfantasyxiv.com.rss">https://feeds.mtib.dev/na.finalfantasyxiv.com.rss</a> and <a href="https://feeds.mtib.dev/eu.finalfantasyxiv.com.rss">https://feeds.mtib.dev/eu.finalfantasyxiv.com.rss</a> for the US and EU servers respectively.
+The feed will be updated at least hourly (but cached by CDN, so no strong guarantees on freshness).</p>
+<p>By the way RSS feeds work, and the data I have available when scraping the news pages, only the current events are contained in the RSS feed, however, most RSS Feed readers will save older entries, just be aware that if you add this feed to your reader you might only see a few new events.</p>
+<p>The code generating this is available here: <a href="https://github.com/mtib/ffxiv-lodestone-rss">https://github.com/mtib/ffxiv-lodestone-rss</a></p>
+<style>
+:root, body {
+    background: var(--bs-body-bg);
+    background-image: url('../assets/web/gunbun-pattern.png');
+    background-size: 150px;
+}
+.container {
+    background: var(--bs-body-bg);
+    border-radius: 5px;
+    box-shadow: 0 0 30px 30px var(--bs-body-bg);
+}
+</style>
+</body>
+</html>

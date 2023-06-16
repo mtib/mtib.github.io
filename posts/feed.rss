@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <atom:link href="https://blog.mtib.dev/posts/feed.rss" rel="self" type="application/rss+xml" />
+    <title>blog.mtib.dev</title>
+    <link>https://blog.mtib.dev/</link>
+    <description>Markus' Blog</description>
+    <item>
+        <title>2023-01-12-ESCPOS-Markdown-web-driver.md</title>
+        <pubDate>Thu, 12 Jan 2023 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2023-01-12-ESCPOS-Markdown-web-driver.md</link>
+        <description>As a response to [SND](https://github.com/BigJk/snd) I created [this repo](https://github.com/mtib/esc-pos-generator) as an alternative that requires no setup and can be used by simply visiting [esc.pos.mtib.dev](https://esc.pos.mtib.dev/) with only static assets and no server side at all....</description>
+        <guid>https://blog.mtib.dev/?post=2023-01-12-ESCPOS-Markdown-web-driver.md?1a78cd4fbb75e970a180352efa8c3688f641affdaa4ef0f8984350a31fe4d9b4</guid>
+    </item>
+    <item>
+        <title>2022-12-04-Game-of-War-(Card-game).md</title>
+        <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2022-12-04-Game-of-War-(Card-game).md</link>
+        <description>[Game of War](https://en.wikipedia.org/wiki/War_(card_game)) is a card game I got re-introduced recently....</description>
+        <guid>https://blog.mtib.dev/?post=2022-12-04-Game-of-War-(Card-game).md?e59963bf8732af0c4a53649a1bb9c0ed3b1eea00b6ef1472ddd74ff85025ab87</guid>
+    </item>
+    <item>
+        <title>2022-10-19-Final-Fantasy-XIV-Lodestone-RSS-feed.md</title>
+        <pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2022-10-19-Final-Fantasy-XIV-Lodestone-RSS-feed.md</link>
+        <description>I wanted a better way to stay up to date on Final Fantasy XIV news without remembering to go to their news sites....</description>
+        <guid>https://blog.mtib.dev/?post=2022-10-19-Final-Fantasy-XIV-Lodestone-RSS-feed.md?3eac8448e2cf70b7901e04394e90c1631f6b0d2a3f23516e06f4a0da198b1ff1</guid>
+    </item>
+    <item>
+        <title>2022-07-15-Material-colors-phone-wallpapers.md</title>
+        <pubDate>Fri, 15 Jul 2022 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2022-07-15-Material-colors-phone-wallpapers.md</link>
+        <description>I tried my hand at generating some Material smartphone backgrounds....</description>
+        <guid>https://blog.mtib.dev/?post=2022-07-15-Material-colors-phone-wallpapers.md?83a9477bbf7b79f395a630d3ea01e8bb4ea74c92d93f12cc9de84246bf0c8087</guid>
+    </item>
+    <item>
+        <title>2022-06-27-No-bullshit-countdown.md</title>
+        <pubDate>Mon, 27 Jun 2022 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2022-06-27-No-bullshit-countdown.md</link>
+        <description>This is a PSA that [no-bs-countdown](https://blog.mtib.dev/no-bs-countdown) exists and is ready to be used. ...</description>
+        <guid>https://blog.mtib.dev/?post=2022-06-27-No-bullshit-countdown.md?339fd771da908a3bdd51b657c9f7f4a74c423348c47068c94c52d3d814b22cc1</guid>
+    </item>
+    <item>
+        <title>2021-09-10-Art-for-Vikki.md</title>
+        <pubDate>Fri, 10 Sep 2021 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2021-09-10-Art-for-Vikki.md</link>
+        <description>First of all, **happy birthday** Vikki! I hope you are having a great day and coming year....</description>
+        <guid>https://blog.mtib.dev/?post=2021-09-10-Art-for-Vikki.md?d726f47a4dbc1dbc72b562c4f1f279cf31a8566b7cfb5f4b44e3902315325c8d</guid>
+    </item>
+    <item>
+        <title>2021-08-07-Moving-to-Denmark.md</title>
+        <pubDate>Sat, 07 Aug 2021 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2021-08-07-Moving-to-Denmark.md</link>
+        <description>I am moving to Denmark from Germany. This blog post documents everything I did and had to do for that. I&#039;ll try to order it chronologically, though there might be some jumps in time for clarity....</description>
+        <guid>https://blog.mtib.dev/?post=2021-08-07-Moving-to-Denmark.md?0ae22db387986653002d07f42d7bcbbb581c51cc5d06a5cd200d8ad59f96f172</guid>
+    </item>
+    <item>
+        <title>2021-08-03-ITU-vacancies-rss.md</title>
+        <pubDate>Tue, 03 Aug 2021 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2021-08-03-ITU-vacancies-rss.md</link>
+        <description>Similar to the [SDU vacancies RSS](/?post=2021-05-06-sdu-vacancies-rss.md) I made an RSS feed for the open PhD positions at ITU: [https://mtib.dev/itu-open.xml](https://mtib.dev/itu-open.xml). Feel free to subscribe using the RSS reader of your choice....</description>
+        <guid>https://blog.mtib.dev/?post=2021-08-03-ITU-vacancies-rss.md?98742aa5b7390af9172dfe7e85a4484e5d0bb7d074fda5feabb72c2bbfb54314</guid>
+    </item>
+    <item>
+        <title>2021-06-12-SAR-in-one-picture.md</title>
+        <pubDate>Sat, 12 Jun 2021 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2021-06-12-SAR-in-one-picture.md</link>
+        <description>This picture can be used in addition to a textual explanation of SAR to create an intuitive understanding without having to explain any binary search background:...</description>
+        <guid>https://blog.mtib.dev/?post=2021-06-12-SAR-in-one-picture.md?226f24a1c9103ffb40e3e9faf6323d5eb9a255ea8cf9898c19b969c2697ee044</guid>
+    </item>
+    <item>
+        <title>2021-05-06-SDU-Vacancies-RSS.md</title>
+        <pubDate>Thu, 06 May 2021 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2021-05-06-SDU-Vacancies-RSS.md</link>
+        <description>Because I am playing with the idea to pursue a post-graduate position, even if I have now decided that I will spend the next year in Odense, I wanted to keep an eye on vacancies at SDU Odense. Though I found [their vacant positions](https://www.sdu.dk/en/service/ledige_stillinger) unusable for the following reasons:...</description>
+        <guid>https://blog.mtib.dev/?post=2021-05-06-SDU-Vacancies-RSS.md?5819ea7b014195a33f04289a98184e580e566f70d32829c71c52f117eb891ae9</guid>
+    </item>
+    <item>
+        <title>2020-10-09-Just-Linux-Things.md</title>
+        <pubDate>Fri, 09 Oct 2020 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2020-10-09-Just-Linux-Things.md</link>
+        <description>There are so many things I wish I had known way before I ended up learning about them. I based these on conversations I have with first and second year computer science students, and the things they don&#039;t know about....</description>
+        <guid>https://blog.mtib.dev/?post=2020-10-09-Just-Linux-Things.md?180377859c236041ab86da05525b46fc4bb9bcac9f765b2196aafcd938cdf15d</guid>
+    </item>
+    <item>
+        <title>2020-10-05-On-automation.md</title>
+        <pubDate>Mon, 05 Oct 2020 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2020-10-05-On-automation.md</link>
+        <description>I want to tell a cautionary tale about automation and the process with which to chose the targets of automation....</description>
+        <guid>https://blog.mtib.dev/?post=2020-10-05-On-automation.md?25298ae5520e2718a79cc4c5e2003a840c2a1d97f44fb481e3f5e0405bcc7588</guid>
+    </item>
+    <item>
+        <title>2020-10-05-Initial-commit.md</title>
+        <pubDate>Mon, 05 Oct 2020 00:00:00 GMT</pubDate>
+        <link>https://blog.mtib.dev/?post=2020-10-05-Initial-commit.md</link>
+        <description>This is mostly just here for the pun. I, however, have to admit that I have deceived[^2] you[^1], as this is far from the initial commit of this blog. Turns out setting up jekyll is much more painful than I thought. I also took upwards of 8 hours just to get github to hand out a certificate for [blog.mtib.dev](https://blog.mtib.dev), though I really appreciate Github-Pages still to be a thing....</description>
+        <guid>https://blog.mtib.dev/?post=2020-10-05-Initial-commit.md?b0dcfea640f2bf2ed17c7048d317fa10017fdb6fb80fdb7874b5d16d8b40644a</guid>
+    </item>
+</channel>
+</rss>

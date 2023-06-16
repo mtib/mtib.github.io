@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>2021 05 06 SDU Vacancies RSS</title>
+        <link rel="canonical" href="https://blog.mtib.dev/#2021-05-06-SDU-Vacancies-RSS" />
+        <style>body, :root {background-color: black; color: white;}</style>
+        <meta http-equiv="Refresh" content="0; url='https://blog.mtib.dev/#2021-05-06-SDU-Vacancies-RSS'" />
+    </head>
+    <body><p>Because I am playing with the idea to pursue a post-graduate position, even if I have now decided that I will spend the next year in Odense, I wanted to keep an eye on vacancies at SDU Odense. Though I found <a href="https://www.sdu.dk/en/service/ledige_stillinger">their vacant positions</a> unusable for the following reasons:</p>
+<ul>
+<li>Unable to be used without JS/Ajax loading of data</li>
+<li>Font/size not accessible</li>
+<li>Slow and annoying UX<ul>
+<li>Settings reset on navigation</li>
+<li>Ajax loading noticeably slowly</li>
+</ul>
+</li>
+<li>No publishing date for each vacancy</li>
+<li>Seemingly random order</li>
+</ul>
+<p>And most importantly: no RSS feed for vacancies!</p>
+<h2 id="solution">Solution</h2>
+<p>I made an <a href="https://mtib.dev/sdu-open.xml">RSS Feed</a> which you can subscribe to for free to track both publication dates and get an overview without having to deal with the sub-par website experience. The code is open-source on GitHub, <a href="https://github.com/mtib/sdu_openrss">have a look</a>.</p>
+<h2 id="open-problems">Open Problems</h2>
+<p>It would be nice to have the entire data of the post as part of the item&#39;s description. But I didn&#39;t want to host a mirror of their text on my page without their consent. I would have to contact them for permission, <strong>or they would need to offer an RSS Feed themselves</strong>.</p>
+<p>Their <a href="https://jobbank.sdu.dk/jobs?keyword=&order_by=&types%5B%5D=1&types%5B%5D=2&types%5B%5D=11&positions%5B%5D=15&locations%5B%5D=11850137&action=search">Jobbank</a> also doesn&#39;t offer an RSS feed. However, that page hosts enough dynamic content that one RSS feed would be overwhelming.</p>
+</body>
+</html>

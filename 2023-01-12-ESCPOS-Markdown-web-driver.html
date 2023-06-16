@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>2023 01 12 ESCPOS Markdown web driver</title>
+        <link rel="canonical" href="https://blog.mtib.dev/#2023-01-12-ESCPOS-Markdown-web-driver" />
+        <style>body, :root {background-color: black; color: white;}</style>
+        <meta http-equiv="Refresh" content="0; url='https://blog.mtib.dev/#2023-01-12-ESCPOS-Markdown-web-driver'" />
+    </head>
+    <body><p>As a response to <a href="https://github.com/BigJk/snd">SND</a> I created <a href="https://github.com/mtib/esc-pos-generator">this repo</a> as an alternative that requires no setup and can be used by simply visiting <a href="https://esc.pos.mtib.dev/">esc.pos.mtib.dev</a> with only static assets and no server side at all.
+It comes with its own ESC/POS <em>driver</em>, only depending on WebUSB for communication with the hardware.
+By rendering Markdown to HTML, then converting that HTML into SVG which can be rendered on a canvas, that canvas is then Dithered and its image data is converted to a ESC/POS image print command that is sent to the printer directly.
+Hosting is taken care of by GitHub Pages, so there are no running costs associated with this.
+If you do not trust my version running, the code is open source and it is incredibly easy to self-host.</p>
+<p>Only browsers supporting <a href="https://wicg.github.io/webusb/#usb">WebUSB</a> are supported (<a href="https://caniuse.com/webusb">Chromium-based</a> as of writing).
+Most Thermal Printers <em>speak</em> ESC/POS, and for those no special drivers are required as long as USB communication is possible.</p>
+<p><img src="../assets/misc/esc-pos-bane.png" alt=""></p>
+<p>I am planning to use it with Markdown conversions of the <a href="https://github.com/OldManUmby/DND.SRD.Wiki">DND.SRD</a> but because it is just printing rendered Markdown it is very easy to modify or create custom content.</p>
+<p>I may add some sort of client-side filesystem to the app to store and restore documents, or add the option to share and recall state using the URL, but so far I rely on copy-pasting or writing Markdown directly in the input field.</p>
+</body>
+</html>
