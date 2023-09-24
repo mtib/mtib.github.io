@@ -10,7 +10,7 @@ const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
         try {
             await navigator.serviceWorker.register(
-                'sw.js',
+                new URL('sw.js', import.meta.url),
             );
         } catch (error) {
             console.error(`Registration failed with ${error}`);

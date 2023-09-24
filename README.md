@@ -9,3 +9,12 @@ yarn build-dev
 yarn build-prod
 yarn deploy
 ```
+
+## Troubleshooting
+
+Running on M1 might require:
+
+```sh
+arch -x86_64 zsh
+npm i -g node-gyp
+```

@@ -15,13 +15,19 @@ type ThemeContextType = {
 const RootStyles = {
     [Mode.Dark]: {
         '--bs-body-bg': '#000',
+        '--bs-body-bg-rgb': '0,0,0',
         '--bs-body-color': '#fff',
+        '--bs-body-color-rgb': '255,255,255',
         '--bs-link-color': '#c8e',
+        '--bs-link-color-rgb': '204,136,238',
         '--bs-link-hover-color': '#eaf',
+        '--bs-link-hover-color-rgb': '238,170,255',
     },
     [Mode.Light]: {
         '--bs-link-color': '#917',
+        '--bs-link-color-rgb': '153 17 119',
         '--bs-link-hover-color': '#615',
+        '--bs-link-hover-color-rgb': '102 17 8',
     },
 } as const satisfies Record<Mode, CSSObject>;
 
@@ -37,7 +43,7 @@ const Theme: React.FC<React.PropsWithChildren<unknown>> = ({ children }) => {
     const value = React.useMemo(() => ({
         mode,
         setMode,
-        toggleMode: () => { setMode(currentMode => currentMode === Mode.Light ? Mode.Dark : Mode.Light) },
+        toggleMode: () => { setMode(currentMode => currentMode === Mode.Light ? Mode.Dark : Mode.Light); },
     }), [mode]);
 
     React.useEffect(() => {
@@ -77,7 +83,7 @@ const Theme: React.FC<React.PropsWithChildren<unknown>> = ({ children }) => {
             {children}
         </ThemeContext.Provider>
     );
-}
+};
 
 export const useTheme = () => React.useContext(ThemeContext);
 
