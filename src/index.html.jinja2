@@ -1,0 +1,44 @@
+{% extends "base.html.jinja2" %}
+{% block content %}
+{% for part in index.parts %}
+<div class="item">
+    <h2>{{part.title}}</h2>
+    {% if part.description %}
+    <p>{{part.description}}</p>
+    {% endif %}
+    {% if part.type == "links-only" %}
+    {% if part.links | length > 0 %}
+    <ul>
+        {% for link in part.links %}
+        <li>
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                {{ link.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% elif part.type == "apps" %}
+    {% for app in part.apps %}
+    <div class="app">
+        <h3>{{ app.title }}</h3>
+        <ul class="inline">
+            {% for link in app.links %}
+            <li>
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% if app.description %}
+        <p>
+            {{ app.description }}
+        </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    Unknown part type: {{ part.type }}
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}

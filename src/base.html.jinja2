@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}blog.mtib.dev{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="preload" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="/assets/m.png">
+    <meta name="application-name" content="blog.mtib.dev">
+    <meta name="theme-color" content="#2a0a2a">
+    <link rel="manifest" href="/assets/manifest.json" />
+    <meta name="description"
+        content="A personal blog of Markus Horst Becker aka mtib, linking to academic resources and open-source apps.">
+    <meta name="robots" content="index,follow">
+    <meta name="subject" content="software development">
+    <meta name="rating" content="General">
+    <meta name="referrer" content="no-referrer">
+    <meta name="ICBM" content="55.681389, 12.455">
+    <meta name="geo.position" content="55.681389;12.455">
+    <meta name="geo.region" content="DK">
+    <meta name="geo.placename" content="Copenhagen">
+</head>
+
+<body>
+
+    <div class="noto-sans-default">
+        <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 10px 0 50px 0;">
+            <div class="item">
+                {% block heading %}
+                <h1>blog.mtib.dev</h1>
+                {% endblock %}
+            </div>
+            {% block content %}
+            FILL ME
+            {% endblock %}
+        </div>
+    </div>
+
+    <style>
+        .item {
+            width: min(calc(100vw - 20px), 800px);
+        }
+
+        .item h2 {
+            margin-bottom: 8px;
+        }
+
+        .app {
+            padding-top: 20px;
+        }
+
+        div.item>div.app:nth-of-type(1) {
+            padding-top: 0px;
+        }
+    </style>
+
+</body>
+
+
+</html>

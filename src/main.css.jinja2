@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    min-height: 100vh;
+    background-color: #2a0a2a;
+    color: #fdf;
+}
+
+
+.noto-sans-default {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #f4f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #f8f;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul:not(ul ul) {
+    padding-left: 0;
+}
+
+ul.inline {
+    display: flex;
+    gap: 0px 20px;
+    flex-wrap: wrap;
+}
+
+ul>li:not(:last-child):not(ul.inline li):has(li) {
+    margin-bottom: 10px;
+}

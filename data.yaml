@@ -1,0 +1,105 @@
+theme:
+  color:
+    background: "#2a0a2a"
+index:
+  parts:
+    - title: links
+      type: links-only
+      description: ""
+      links:
+        - title: GitHub
+          url: https://github.com/mtib
+        - title: LinkedIn
+          url: https://www.linkedin.com/in/mtib/
+        - title: CV
+          url: /assets/cv.pdf
+    - title: posts
+      type: links-only
+      description: |
+        WIP - migrating from client-side rendered markdown to static HTML. Check my
+        <a href="https://github.com/mtib?tab=repositories" target="_blank" rel="noopener noreferrer">
+            GitHub repositories</a> for what I am working on.
+      links: []
+    - title: apps
+      type: apps
+      apps:
+        - title: no-bs countdown
+          description: |
+            A fully client-side, static HTML countdown timer, with no ads or accounts or price. All data is
+            stored in the URL.
+          links:
+            - title: website
+              url: https://blog.mtib.dev/no-bs-countdown/
+            - title: repository
+              url: https://github.com/mtib/no-bs-countdown
+        - title: no-bs spinner
+          description: |
+            A fully client-side, static HTML spinner, with no ads or accounts or price. All data is
+            stored in the URL.
+          links:
+            - title: website
+              url: https://blog.mtib.dev/no-bs-spinner/
+            - title: repository
+              url: https://github.com/mtib/no-bs-spinner
+        - title: esc.pos
+          description: |
+            A fully client-side, static HTML ESC/POS (thermal printer) UI. Using WebUSB to print on connected
+            hardware without requiring any drivers.
+            Prints any markdown (rendered in browser to ESC/POS bitmap commands).
+          links:
+            - title: website
+              url: https://esc.pos.mtib.dev/
+            - title: repository
+              url: https://github.com/mtib/esc-pos-generator
+        - title: void
+          description: |
+            Web application to store, view and share markdown documents in a mostly write-only style, with
+            powerful search and privacy (local encryption).
+          links:
+            - title: website
+              url: https://void.mtib.dev/
+            - title: front-end repository
+              url: https://github.com/mtib/void-frontend
+            - title: back-end repository
+              url: https://github.com/mtib/void-backend
+    - title: papers
+      type: apps
+      apps:
+        - title: "SplitBFT: Improving Byzantine Fault Tolerance Safety Using Trusted Compartments"
+          links:
+            - title: paper (ACM)
+              url: https://dl.acm.org/doi/abs/10.1145/3528535.3531516
+        - title: Resilient Byzantine Fault-Tolerance using Multiple Trusted Execution Environments
+          links:
+            - title: paper
+              url: /assets/papers/splitbft_resilient_consensus.pdf
+            - title: slides
+              url: /assets/slides/splitbft_resilient_consensus_slides.pdf
+            - title: presentation
+              url: https://www.youtube.com/watch?v=6fuUlrk3IDg
+        - title: Microsecond Replication for Microsecond Applications
+          links:
+            - title: paper
+              url: /assets/papers/ms_consensus.pdf
+            - title: slides
+              url: /assets/slides/ms_consensus_slides.pdf
+        - title: Low Latency Byzantine Agreement using RDMA
+          links:
+            - title: paper
+              url: /assets/papers/rdma_consensus.pdf
+            - title: slides
+              url: /assets/slides/rdma_consensus_slides.pdf
+    - title: certifications
+      type: links-only
+      description: ""
+      links:
+        - title: Master of Science in Computer Science (Minor Mathematics)
+          url: /assets/certs/ma_cert.pdf
+        - title: Bachelor of Science in Computer Science
+          url: /assets/certs/ba_cert.pdf
+        - title: TT38 Talent Test
+          url: /assets/certs/tt38_talent_test.pdf
+        - title: "Predictive Index: Behaviour"
+          url: /assets/certs/pi_behaviour.pdf
+        - title: "Predictive Index: Cognitive"
+          url: /assets/certs/pi_cognitive.pdf
