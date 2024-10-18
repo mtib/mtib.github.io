@@ -10,6 +10,7 @@
 </code>
 
 <input type="button" value="Copy" id="copyBtn">
+<span id="feedback"></span>
 
 <script>
     const input = document.getElementById('input');
@@ -55,13 +56,23 @@
         output.textContent = getAlgo()(input.value);
     });
 
+    var lastFeedbackFade = null;
     document.getElementById('copyBtn').addEventListener('click', () => {
+        if (lastFeedbackFade) {
+            clearTimeout(lastFeedbackFade);
+        }
         navigator.clipboard.writeText(output.textContent);
+        const feedback = document.getElementById('feedback');
+        feedback.textContent = 'Copied at ' + new Date().toLocaleTimeString();
+        lastFeedbackFade = setTimeout(() => {
+            feedback.textContent = "";
+        }, 2000);
     });
 </script>
 
 <style>
     textarea#input {
+        display: block;
         width: 100%;
         min-height: 6em;
         background-color: #202;
@@ -69,7 +80,7 @@
         border-radius: 1em;
         padding: 1em 1em;
         color: #fdf;
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
         resize: vertical;
     }
     #outputWrap {
@@ -81,20 +92,32 @@
         padding: 1em 1em;
         margin-top: 1em;
     }
+    #output {
+        text-wrap: pretty;
+        overflow-wrap: break-word;
+    }
     #copyBtn {
-        display: block;
+        display: inline-block;
         margin-top: 1em;
         background-color: #fdf;
         border: none;
-        color: #000;
+        color: #101;
         padding: .1em .5em;
         border-radius: .5em;
+        cursor: pointer;
+    }
+    #copyBtn:hover {
+        background-color: #fff;
     }
     #algo {
         background-color: #fdf;
         border: none;
-        color: #000;
+        color: #101;
         padding: .1em .5em;
         border-radius: .5em;
+        cursor: pointer;
+    }
+    #algo:hover {
+        background-color: #fff;
     }
 </style>
