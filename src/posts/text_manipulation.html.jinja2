@@ -1,0 +1,11 @@
+{% extends "src/base.html.jinja2" %}
+{% block heading %}
+<h1>blog.mtib.dev</h1>
+<a href="/index.html">back</a>
+{% endblock heading %}
+{% block content %}
+<div class="item">
+    <h2>Text Manipulation</h2>
+    {% include "text_manipulation.html" %}
+</div>
+{% endblock content %}

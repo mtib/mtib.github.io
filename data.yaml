@@ -19,7 +19,9 @@ index:
         WIP - migrating from client-side rendered markdown to static HTML. Check my
         <a href="https://github.com/mtib?tab=repositories" target="_blank" rel="noopener noreferrer">
             GitHub repositories</a> for what I am working on.
-      links: []
+      links:
+        - title: Text Manipulation
+          url: /posts/text_manipulation.html
     - title: apps
       type: apps
       apps:

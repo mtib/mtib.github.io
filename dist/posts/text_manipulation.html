@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}blog.mtib.dev{% endblock %}</title>
+    <title>blog.mtib.dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="preload" as="style"
@@ -39,13 +39,86 @@
         align-items: center;
         padding: 10px 0 50px 0;">
             <div class="item">
-                {% block heading %}
-                <h1>blog.mtib.dev</h1>
-                {% endblock %}
+                
+<h1>blog.mtib.dev</h1>
+<a href="/index.html">back</a>
+
             </div>
-            {% block content %}
-            FILL ME
-            {% endblock %}
+            
+<div class="item">
+    <h2>Text Manipulation</h2>
+    <textarea name="input" id="input"></textarea>
+
+<select name="algo" id="algo">
+    <option value="codeQuote">Code quote</option>
+</select>
+
+<code id="outputWrap">
+<pre id="output">
+</pre>
+</code>
+
+<input type="button" value="Copy" id="copyBtn">
+
+<script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    function codeQuote(data) {
+        return data.replace(/(?<!`)(_?[a-zA-Z0-9()/\\]+(_|\([a-zA-Z0-9()/\\]*\)|\->)[a-zA-Z0-9()/\\]*)(?!`)/g, '`$1`');
+    }
+
+    const algos = {
+        codeQuote: codeQuote,
+    };
+
+    function getAlgo() {
+        const algoName = document.getElementById('algo').value;
+        const algo = algos[algoName]
+
+        if (algo) {
+            return algo;
+        }
+
+        return (data) => `Unknown algorithm: ${algoName}`;
+    }
+
+    input.addEventListener('input', () => {
+        output.textContent = getAlgo()(input.value);
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+        navigator.clipboard.writeText(output.textContent);
+    });
+</script>
+
+<style>
+    textarea#input {
+        width: 100%;
+        min-height: 6em;
+        background-color: #202;
+        border: #fdf 1px solid;
+        border-radius: 1em;
+        padding: 1em 1em;
+        color: #fdf;
+        margin-bottom: 0.5em;
+    }
+    #outputWrap {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        border: #fdf 1px solid;
+        border-radius: 1em;
+        padding: 1em 1em;
+        margin-top: 1em;
+    }
+    #copyBtn {
+        display: block;
+        margin-top: 1em;
+    }
+</style>
+</div>
+
         </div>
     </div>
 

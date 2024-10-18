@@ -1,0 +1,70 @@
+<textarea name="input" id="input"></textarea>
+
+<select name="algo" id="algo">
+    <option value="codeQuote">Code quote</option>
+</select>
+
+<code id="outputWrap">
+<pre id="output">
+</pre>
+</code>
+
+<input type="button" value="Copy" id="copyBtn">
+
+<script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    function codeQuote(data) {
+        return data.replace(/(?<!`)(_?[a-zA-Z0-9()/\\]+(_|\([a-zA-Z0-9()/\\]*\)|\->)[a-zA-Z0-9()/\\]*)(?!`)/g, '`$1`');
+    }
+
+    const algos = {
+        codeQuote: codeQuote,
+    };
+
+    function getAlgo() {
+        const algoName = document.getElementById('algo').value;
+        const algo = algos[algoName]
+
+        if (algo) {
+            return algo;
+        }
+
+        return (data) => `Unknown algorithm: ${algoName}`;
+    }
+
+    input.addEventListener('input', () => {
+        output.textContent = getAlgo()(input.value);
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+        navigator.clipboard.writeText(output.textContent);
+    });
+</script>
+
+<style>
+    textarea#input {
+        width: 100%;
+        min-height: 6em;
+        background-color: #202;
+        border: #fdf 1px solid;
+        border-radius: 1em;
+        padding: 1em 1em;
+        color: #fdf;
+        margin-bottom: 0.5em;
+    }
+    #outputWrap {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        border: #fdf 1px solid;
+        border-radius: 1em;
+        padding: 1em 1em;
+        margin-top: 1em;
+    }
+    #copyBtn {
+        display: block;
+        margin-top: 1em;
+    }
+</style>
