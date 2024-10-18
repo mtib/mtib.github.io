@@ -15,8 +15,21 @@
     const input = document.getElementById('input');
     const output = document.getElementById('output');
 
+    /**
+     * @param {string} data
+     */
     function codeQuote(data) {
-        return data.replace(/(?<!`)(_?[a-zA-Z0-9()/\\]+(_|\([a-zA-Z0-9()/\\]*\)|\->)[a-zA-Z0-9()/\\]*)(?!`)/g, '`$1`');
+        return data.split("\n").map(line => line.split(" ").map(word => {
+            if (/`/.test(word)) {
+                return word;
+            }
+
+            if (!/[_\-:=/\\]|.\(.*\)/.test(word)) {
+                return word;
+            }
+
+            return `\`${word}\``;
+        }).join(' ')).join("\n");
     }
 
     const algos = {
