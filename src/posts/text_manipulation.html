@@ -24,8 +24,12 @@
                 return word;
             }
 
-            if (!/[_\-:=/\\]|.\(.*\)/.test(word)) {
+            if (!/[_=/\\]|.\(.*\)/.test(word)) {
                 return word;
+            }
+
+            if (/.+[,.!?]/.test(word)) {
+                return `\`${word.slice(0, -1)}\`${word.slice(-1)}`;
             }
 
             return `\`${word}\``;
@@ -79,5 +83,17 @@
     #copyBtn {
         display: block;
         margin-top: 1em;
+        background-color: #fdf;
+        border: none;
+        color: #000;
+        padding: .1em .5em;
+        border-radius: .5em;
+    }
+    #algo {
+        background-color: #fdf;
+        border: none;
+        color: #000;
+        padding: .1em .5em;
+        border-radius: .5em;
     }
 </style>
