@@ -29,7 +29,7 @@
                 return word;
             }
 
-            if (/.+[,.!?]/.test(word)) {
+            if (/.+[,.!?]$/.test(word)) {
                 return `\`${word.slice(0, -1)}\`${word.slice(-1)}`;
             }
 
