@@ -7,11 +7,9 @@
     <title>{% block title %}blog.mtib.dev{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="preload" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght,MONO@500,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght,MONO@700,0&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
     <link rel="icon" href="/assets/m.png">
     <meta name="application-name" content="blog.mtib.dev">
@@ -31,7 +29,7 @@
 
 <body>
 
-    <div class="noto-sans-default">
+    <div class="sono-body">
         <div style="
         display: flex;
         flex-direction: column;
@@ -40,7 +38,7 @@
         padding: 10px 0 50px 0;">
             <div class="item">
                 {% block heading %}
-                <h1>blog.mtib.dev</h1>
+                <h1 class="sono-mono">blog.mtib.dev</h1>
                 {% endblock %}
             </div>
             {% block content %}
@@ -68,6 +66,5 @@
     </style>
 
 </body>
-
 
 </html>
