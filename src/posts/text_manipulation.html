@@ -1,16 +1,16 @@
-<textarea name="input" id="input"></textarea>
+<textarea name="input" id="input" class="sono-mono"></textarea>
 
 <select name="algo" id="algo">
     <option value="codeQuote">Code quote</option>
 </select>
 
 <code id="outputWrap">
-<pre id="output">
+<pre id="output" class="sono-mono">
 </pre>
 </code>
 
 <input type="button" value="Copy" id="copyBtn">
-<span id="feedback"></span>
+<span id="feedback" class="sono-mono"></span>
 
 <script>
     const input = document.getElementById('input');
@@ -43,7 +43,7 @@
 
     function getAlgo() {
         const algoName = document.getElementById('algo').value;
-        const algo = algos[algoName]
+        const algo = algos[algoName];
 
         if (algo) {
             return algo;
@@ -83,6 +83,7 @@
         margin-bottom: 1em;
         resize: vertical;
     }
+
     #outputWrap {
         display: block;
         width: 100%;
@@ -92,10 +93,12 @@
         padding: 1em 1em;
         margin-top: 1em;
     }
+
     #output {
         text-wrap: pretty;
         overflow-wrap: break-word;
     }
+
     #copyBtn {
         display: inline-block;
         margin-top: 1em;
@@ -106,9 +109,11 @@
         border-radius: .5em;
         cursor: pointer;
     }
+
     #copyBtn:hover {
         background-color: #fff;
     }
+
     #algo {
         background-color: #fdf;
         border: none;
@@ -117,6 +122,7 @@
         border-radius: .5em;
         cursor: pointer;
     }
+
     #algo:hover {
         background-color: #fff;
     }
