@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck – kurz erklärt</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="FDM-3D-Druck einfach erklärt: PLA, PETG, Carbonfaser, Temperaturen, Düsen und der Anycubic i3 Mega.">
+    <link rel="icon" href="/assets/m.png">
+    <style>
+        :root {
+            color-scheme: light;
+
+            --surface: #ffffff;
+            --card: #f6f5f2;
+            --card-line: #e2e0da;
+            --ink: #14130f;
+            --ink-2: #4f4d46;
+            --ink-3: #77746a;
+
+            /* Datenreihen – validiert für hellen Hintergrund */
+            --duese: #eb6834;
+            --bett: #2a78d6;
+
+            /* Abschnittsfarben */
+            --c-pla: #008300;
+            --c-petg: #2a78d6;
+            --c-cf: #4a3aa7;
+            --c-nozzle: #eb6834;
+            --c-sla: #e87ba4;
+
+            --radius: 14px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            background: var(--surface);
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 0 64px;
+        }
+
+        .wrap {
+            width: min(100% - 32px, 700px);
+            margin-inline: auto;
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* ---------- Kopf ---------- */
+
+        header {
+            padding: 44px 0 8px;
+        }
+
+        h1 {
+            font-size: 2.05rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .lede {
+            color: var(--ink-2);
+            margin-top: 12px;
+            font-size: 1.05rem;
+        }
+
+        /* ---------- Inhaltsverzeichnis ---------- */
+
+        nav.toc {
+            margin: 28px 0 8px;
+            background: var(--card);
+            border: 1px solid var(--card-line);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+        }
+
+        nav.toc p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--ink-3);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        nav.toc ol {
+            margin: 0;
+            padding-left: 1.3em;
+        }
+
+        nav.toc li {
+            margin: 6px 0;
+        }
+
+        nav.toc a {
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 2px solid var(--card-line);
+            padding-bottom: 2px;
+        }
+
+        /* ---------- Abschnitte ---------- */
+
+        section {
+            margin-top: 52px;
+            scroll-margin-top: 16px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            padding-left: 14px;
+            border-left: 6px solid var(--ink-3);
+        }
+
+        section[data-accent="pla"] h2 {
+            border-color: var(--c-pla);
+        }
+
+        section[data-accent="petg"] h2 {
+            border-color: var(--c-petg);
+        }
+
+        section[data-accent="cf"] h2 {
+            border-color: var(--c-cf);
+        }
+
+        section[data-accent="nozzle"] h2 {
+            border-color: var(--c-nozzle);
+        }
+
+        section[data-accent="sla"] h2 {
+            border-color: var(--c-sla);
+        }
+
+        h3 {
+            font-size: 1.12rem;
+            margin-top: 28px;
+        }
+
+        p {
+            margin-top: 14px;
+        }
+
+        p.sub {
+            color: var(--ink-2);
+        }
+
+        ul {
+            margin-top: 14px;
+            padding-left: 1.25em;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* ---------- Karten & Hinweise ---------- */
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--card-line);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-top: 22px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .note {
+            border-left: 6px solid var(--c-nozzle);
+            background: #fdf1ea;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 16px 18px;
+            margin-top: 22px;
+        }
+
+        .note p:first-child {
+            margin-top: 0;
+        }
+
+        .note b {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .merk {
+            border-left-color: var(--c-pla);
+            background: #edf6ed;
+        }
+
+        /* ---------- Kurz-Fakten ---------- */
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .fact {
+            background: var(--card);
+            border: 1px solid var(--card-line);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+        }
+
+        .fact .k {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-3);
+            font-weight: 700;
+        }
+
+        .fact .v {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+
+        .fact .v small {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--ink-2);
+            display: block;
+        }
+
+        /* ---------- Temperatur-Diagramm ---------- */
+
+        figure {
+            margin: 26px 0 0;
+        }
+
+        figcaption {
+            font-size: 0.92rem;
+            color: var(--ink-2);
+            margin-top: 12px;
+        }
+
+        .chart {
+            background: var(--card);
+            border: 1px solid var(--card-line);
+            border-radius: var(--radius);
+            padding: 20px 18px 14px;
+        }
+
+        .chart-title {
+            font-weight: 700;
+            font-size: 1.02rem;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+            font-size: 0.88rem;
+            color: var(--ink-2);
+        }
+
+        .legend span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            flex: none;
+        }
+
+        .sw-duese {
+            background: var(--duese);
+        }
+
+        .sw-bett {
+            background: var(--bett);
+        }
+
+        .grp {
+            margin-top: 22px;
+        }
+
+        .grp-name {
+            font-weight: 700;
+            font-size: 1.02rem;
+            margin-bottom: 8px;
+        }
+
+        .brow {
+            margin-top: 10px;
+        }
+
+        .bhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: var(--ink-2);
+        }
+
+        .bhead .val {
+            font-weight: 700;
+            color: var(--ink);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .track {
+            position: relative;
+            height: 16px;
+            margin-top: 4px;
+            background: #e7e5de;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .fill {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .fill.d {
+            background: var(--duese);
+        }
+
+        .fill.b {
+            background: var(--bett);
+        }
+
+        .span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            border-radius: 0 4px 4px 0;
+            /* 2px Flächenabstand zum Vollbalken */
+            border-left: 2px solid var(--card);
+        }
+
+        .span.d {
+            background: #f7b79a;
+        }
+
+        .span.b {
+            background: #a5c6ee;
+        }
+
+        .axis {
+            position: relative;
+            height: 1.4em;
+            margin-top: 16px;
+            border-top: 1px solid var(--card-line);
+            font-size: 0.78rem;
+            color: var(--ink-3);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .axis b {
+            position: absolute;
+            top: 3px;
+            font-weight: 400;
+            transform: translateX(-50%);
+        }
+
+        .axis b:first-child {
+            transform: none;
+        }
+
+        .axis b:last-child {
+            transform: translateX(-100%);
+        }
+
+        /* ---------- Tabellen ---------- */
+
+        .scroller {
+            overflow-x: auto;
+            margin-top: 22px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.92rem;
+        }
+
+        caption {
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.02rem;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px 6px;
+            border-bottom: 1px solid var(--card-line);
+            vertical-align: top;
+        }
+
+        thead th {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink-3);
+            border-bottom: 2px solid var(--card-line);
+        }
+
+        tbody th {
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .dots {
+            letter-spacing: 0;
+            font-size: 0.88rem;
+            white-space: nowrap;
+        }
+
+        .dots i {
+            font-style: normal;
+            color: var(--ink-3);
+            opacity: 0.35;
+        }
+
+        /* ---------- Filament-Rollen ---------- */
+
+        .spools {
+            list-style: none;
+            padding: 0;
+            margin-top: 22px;
+        }
+
+        .spools li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--card-line);
+            margin: 0;
+        }
+
+        .spools li:last-child {
+            border-bottom: 0;
+        }
+
+        .dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            flex: none;
+            margin-top: 4px;
+            border: 1px solid rgba(0, 0, 0, .18);
+        }
+
+        .spool-t {
+            font-weight: 700;
+        }
+
+        .spool-d {
+            color: var(--ink-2);
+            font-size: 0.92rem;
+        }
+
+        .mine {
+            background: #edf6ed;
+            border-radius: var(--radius);
+            padding: 12px 14px !important;
+            border-bottom: 0 !important;
+        }
+
+        /* ---------- Fuß ---------- */
+
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid var(--card-line);
+            color: var(--ink-3);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 420px) {
+            body {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header>
+            <h1>3D-Druck – kurz erklärt</h1>
+            <p class="lede">Was da eigentlich passiert, wenn Du mir beim Drucken zuschaust. Und warum Dein Teil aus der
+                dunkelgrünen Rolle kommt.</p>
+        </header>
+
+        <nav class="toc">
+            <p>Auf dieser Seite</p>
+            <ol>
+                <li><a href="#prinzip">Wie der Drucker arbeitet</a></li>
+                <li><a href="#drucker">Unser Drucker: Anycubic i3 Mega</a></li>
+                <li><a href="#pla">PLA – der Einfache</a></li>
+                <li><a href="#petg">PETG – der Zähe</a></li>
+                <li><a href="#cf">„+CF“ – Carbonfasern drin</a></li>
+                <li><a href="#temp">Temperaturen auf einen Blick</a></li>
+                <li><a href="#duesen">Düsen: Messing oder Stahl</a></li>
+                <li><a href="#rollen">Unsere Rollen</a></li>
+                <li><a href="#deins">Dein Teil: PETG-CF</a></li>
+                <li><a href="#sla">Noch ein Drucker: SLA / Resin</a></li>
+            </ol>
+        </nav>
+
+        <!-- ================= PRINZIP ================= -->
+        <section id="prinzip">
+            <h2>Wie der Drucker arbeitet</h2>
+
+            <p>Stell Dir eine sehr genaue Heißklebepistole vor, die ein Roboter führt.</p>
+
+            <p>Von einer Rolle wird ein Kunststoffdraht (1,75 mm dick, „Filament“) eingezogen. Der Draht läuft durch ein
+                Heizelement und wird flüssig. Unten kommt er durch eine winzige Öffnung wieder heraus – die
+                <strong>Düse</strong>, 0,4 mm breit, etwa so dick wie eine Bleistiftmine.
+            </p>
+
+            <p>Die Düse fährt hin und her und malt damit eine Linie. Ist die erste Lage fertig, geht sie 0,2 mm höher und
+                malt die nächste darauf. Lage für Lage, oft ein paar tausend Mal. Am Ende steht das Teil da.</p>
+
+            <figure>
+                <svg viewBox="0 0 400 410" role="img" aria-labelledby="svg1t" style="width:100%;height:auto">
+                    <title id="svg1t">Aufbau eines FDM-Druckers: Filamentrolle, Heizung, Düse und Druckbett</title>
+                    <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif">
+                        <circle cx="72" cy="72" r="46" fill="none" stroke="#14130f" stroke-width="3" />
+                        <circle cx="72" cy="72" r="31" fill="none" stroke="#c9c6be" stroke-width="2" />
+                        <circle cx="72" cy="72" r="21" fill="none" stroke="#c9c6be" stroke-width="2" />
+                        <circle cx="72" cy="72" r="11" fill="#e7e5de" stroke="#14130f" stroke-width="2.5" />
+                        <text x="72" y="142" text-anchor="middle" font-size="18" fill="#4f4d46">Filament-Rolle</text>
+                        <text x="72" y="164" text-anchor="middle" font-size="15" fill="#77746a">1 kg Draht, 1,75 mm</text>
+
+                        <path d="M118 72 H182 Q214 72 214 104 V172" fill="none" stroke="#eb6834" stroke-width="4"
+                            stroke-linecap="round" />
+
+                        <rect x="174" y="172" width="80" height="54" rx="7" fill="#eb6834" />
+                        <text x="214" y="205" text-anchor="middle" font-size="15" font-weight="700"
+                            fill="#ffffff">200–250°</text>
+                        <text x="264" y="194" font-size="18" fill="#4f4d46">Heizung</text>
+                        <text x="264" y="216" font-size="15" fill="#77746a">schmilzt den Draht</text>
+
+                        <path d="M196 226 L214 264 L232 226 Z" fill="#14130f" />
+                        <text x="264" y="254" font-size="18" fill="#4f4d46">Düse 0,4 mm</text>
+
+                        <path d="M214 264 V286" stroke="#eb6834" stroke-width="4" stroke-linecap="round" />
+                        <rect x="104" y="286" width="220" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="104" y="298" width="186" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="104" y="310" width="152" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="82" y="324" width="264" height="16" rx="5" fill="#2a78d6" />
+                        <text x="214" y="368" text-anchor="middle" font-size="18" fill="#4f4d46">beheiztes Druckbett</text>
+                        <text x="214" y="392" text-anchor="middle" font-size="16" fill="#77746a">Lage für Lage, je 0,2 mm</text>
+                    </g>
+                </svg>
+                <figcaption>Der Draht wird geschmolzen, durch eine 0,4-mm-Düse gedrückt und in dünnen Lagen aufeinander
+                    gelegt. Das Bett ist warm, damit die erste Lage klebt und sich das Teil nicht hochzieht.</figcaption>
+            </figure>
+
+            <div class="note merk">
+                <p><b>Merksatz</b>Ein 3D-Drucker schneidet nichts weg. Er baut auf – wie ein Baumkuchen, nur in
+                    Millimeterscheiben.</p>
+            </div>
+        </section>
+
+        <!-- ================= DRUCKER ================= -->
+        <section id="drucker">
+            <h2>Unser Drucker: Anycubic i3 Mega</h2>
+
+            <p>Ein solides Einsteigergerät, seit Jahren im Einsatz. Ein Stahlrahmen, drei Motoren für die drei Richtungen
+                und ein Touchscreen. Nichts Kompliziertes.</p>
+
+            <div class="facts">
+                <div class="fact">
+                    <div class="k">Bauraum</div>
+                    <div class="v">210 × 210 × 205 mm<small>etwa ein Schuhkarton-Deckel</small></div>
+                </div>
+                <div class="fact">
+                    <div class="k">Düse</div>
+                    <div class="v">0,4 mm<small>Messing oder gehärteter Stahl</small></div>
+                </div>
+                <div class="fact">
+                    <div class="k">Schichthöhe</div>
+                    <div class="v">0,2 mm<small>= 5 Lagen pro Millimeter</small></div>
+                </div>
+                <div class="fact">
+                    <div class="k">Druckbett</div>
+                    <div class="v">bis 100 °C<small>Glasplatte, beheizt</small></div>
+                </div>
+            </div>
+
+            <h3>Zwei Besonderheiten</h3>
+            <ul>
+                <li><strong>Bowden-Antrieb:</strong> Der Motor, der den Draht schiebt, sitzt nicht oben am heißen Kopf,
+                    sondern hinten am Rahmen. Dazwischen liegt ein Schlauch. Das macht den Druckkopf leicht und schnell –
+                    aber weiche Materialien lassen sich damit schlechter schieben.</li>
+                <li><strong>Teflon bis in den Kopf:</strong> Dieser Schlauch geht bis kurz vor die Heizung. Deshalb ist
+                    bei etwa <strong>250 °C Schluss</strong> – darüber nimmt das Teflon Schaden. Für alles, was wir
+                    drucken, reicht das.</li>
+            </ul>
+
+            <p class="sub">Nachgerüstet habe ich inzwischen einen besseren Schlauch (Capricorn, engere Toleranz,
+                hitzefester) und einen kleinen Satz Düsen zum Wechseln.</p>
+        </section>
+
+        <!-- ================= PLA ================= -->
+        <section id="pla" data-accent="pla">
+            <h2>PLA – der Einfache</h2>
+
+            <p>Der Standard-Kunststoff. Wird aus Mais- bzw. Zuckerrohrstärke hergestellt, riecht beim Drucken fast nicht
+                und ist gutmütig wie kein zweiter. Fast alles, was Du mich hast drucken sehen, war PLA.</p>
+
+            <div class="facts">
+                <div class="fact">
+                    <div class="k">Düse</div>
+                    <div class="v">200–220 °C</div>
+                </div>
+                <div class="fact">
+                    <div class="k">Druckbett</div>
+                    <div class="v">55–60 °C</div>
+                </div>
+            </div>
+
+            <h3>Gut für</h3>
+            <ul>
+                <li>Deko, Figuren, Modelle, Spielzeug</li>
+                <li>scharfe Kanten und feine Details</li>
+                <li>alles, was schnell und ohne Ärger klappen soll</li>
+            </ul>
+
+            <h3>Nicht gut für</h3>
+            <ul>
+                <li><strong>Wärme.</strong> Ab etwa 55–60 °C wird PLA weich. Ein Teil im Auto hinter der Windschutzscheibe
+                    ist im Sommer nach einem Nachmittag verzogen.</li>
+                <li><strong>Belastung.</strong> PLA ist steif, aber spröde: Es biegt sich kaum, es bricht. Wie ein
+                    Zuckerwürfel, nicht wie ein Gummi.</li>
+                <li>dauerhaft draußen – UV-Licht und Feuchtigkeit machen es mit der Zeit mürbe.</li>
+            </ul>
+
+            <div class="note merk">
+                <p><b>PLA+ (die weiße Rolle)</b>Dieselbe Familie, nur mit Zusätzen, die es zäher machen. Bricht nicht so
+                    leicht, druckt sich genauso einfach. Temperaturen: 205–225 °C.</p>
+            </div>
+        </section>
+
+        <!-- ================= PETG ================= -->
+        <section id="petg" data-accent="petg">
+            <h2>PETG – der Zähe</h2>
+
+            <p>Naher Verwandter der PET-Getränkeflasche. Das Material fühlt sich etwas „öliger“ an als PLA und ist
+                deutlich robuster.</p>
+
+            <div class="facts">
+                <div class="fact">
+                    <div class="k">Düse</div>
+                    <div class="v">235–250 °C</div>
+                </div>
+                <div class="fact">
+                    <div class="k">Druckbett</div>
+                    <div class="v">75–80 °C</div>
+                </div>
+            </div>
+
+            <h3>Gut für</h3>
+            <ul>
+                <li><strong>Teile, die etwas aushalten müssen</strong> – Halterungen, Gehäuse, Klemmen, Ersatzteile</li>
+                <li><strong>Wärme:</strong> hält rund 75–80 °C aus, also auch Auto und Heizungsnähe</li>
+                <li><strong>draußen:</strong> UV- und wasserfest genug für Balkon und Garten</li>
+                <li>es <strong>biegt sich, bevor es bricht</strong> – das ist der große Unterschied zu PLA</li>
+            </ul>
+
+            <h3>Die Nachteile</h3>
+            <ul>
+                <li>Es <strong>zieht Fäden</strong> – feine Spinnweben zwischen den Teilen, die man hinterher abzupft.</li>
+                <li>Es klebt <em>sehr</em> gut am Druckbett. Manchmal zu gut.</li>
+                <li>Es zieht Feuchtigkeit aus der Luft. Eine feuchte Rolle knistert beim Drucken und gibt raue
+                    Oberflächen. Deshalb: Tüte, Trockenmittel.</li>
+                <li>Details werden eine Spur weniger scharf als bei PLA.</li>
+            </ul>
+        </section>
+
+        <!-- ================= CF ================= -->
+        <section id="cf" data-accent="cf">
+            <h2>„+CF“ – Carbonfasern drin</h2>
+
+            <p>CF steht für <em>Carbon Fibre</em>, Kohlefaser. Man nimmt ganz normales PLA oder PETG und mischt kurz
+                geschnittene Carbonfasern unter – winzige schwarze Schnipsel, kürzer als ein Millimeter, etwa 10–20 % vom
+                Gewicht.</p>
+
+            <div class="note merk">
+                <p><b>Der Vergleich</b>Wie Stahl im Beton: Der Beton allein ist steif, aber er arbeitet und reißt. Mit
+                    Einlage bleibt er in Form. Die Fasern machen den Kunststoff <strong>steifer und formstabiler</strong> –
+                    nicht automatisch unzerbrechlicher.</p>
+            </div>
+
+            <h3>Was besser wird</h3>
+            <ul>
+                <li><strong>Steifigkeit:</strong> Das Teil biegt sich unter Last spürbar weniger durch.</li>
+                <li><strong>Maßhaltigkeit:</strong> Es zieht sich beim Abkühlen kaum zusammen. Ecken bleiben Ecken.</li>
+                <li><strong>Weniger Fäden</strong> – vor allem bei PETG-CF ein echter Gewinn.</li>
+                <li><strong>Optik:</strong> seidenmatt statt glänzend, leicht rau, sehr wertig. Man sieht die
+                    Druckschichten kaum noch.</li>
+            </ul>
+
+            <h3>Was schlechter wird</h3>
+            <ul>
+                <li>Etwas <strong>spröder</strong>: Was steifer ist, gibt weniger nach. PETG-CF bricht eher als reines
+                    PETG.</li>
+                <li>Man braucht <strong>10–20 °C mehr</strong> an der Düse.</li>
+                <li>Die Rolle muss <strong>trocken</strong> sein, sonst wird die Oberfläche fleckig.</li>
+                <li>Und der wichtigste Punkt: <strong>Es schmirgelt die Düse aus.</strong> Dazu gleich mehr.</li>
+            </ul>
+        </section>
+
+        <!-- ================= TEMPERATUREN ================= -->
+        <section id="temp">
+            <h2>Temperaturen auf einen Blick</h2>
+
+            <p>Jedes Material will seine eigene Hitze. Zu kalt: Die Lagen kleben nicht aneinander, das Teil bricht später
+                an den Schichten. Zu heiß: Es verläuft, fädelt und wird unsauber.</p>
+
+            <figure>
+                <div class="chart">
+                    <div class="chart-title">Düsen- und Betttemperatur je Material</div>
+                    <div class="legend">
+                        <span><i class="swatch sw-duese"></i> Düse</span>
+                        <span><i class="swatch sw-bett"></i> Druckbett</span>
+                    </div>
+
+                    <div class="grp">
+                        <div class="grp-name">PLA</div>
+                        <div class="brow">
+                            <div class="bhead"><span>Düse</span><span class="val">200–220 °C</span></div>
+                            <div class="track">
+                                <div class="fill d" style="width:66.7%"></div>
+                                <div class="span d" style="left:66.7%;width:6.7%"></div>
+                            </div>
+                        </div>
+                        <div class="brow">
+                            <div class="bhead"><span>Druckbett</span><span class="val">55–60 °C</span></div>
+                            <div class="track">
+                                <div class="fill b" style="width:18.3%"></div>
+                                <div class="span b" style="left:18.3%;width:1.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grp">
+                        <div class="grp-name">PLA-CF</div>
+                        <div class="brow">
+                            <div class="bhead"><span>Düse</span><span class="val">210–230 °C</span></div>
+                            <div class="track">
+                                <div class="fill d" style="width:70%"></div>
+                                <div class="span d" style="left:70%;width:6.7%"></div>
+                            </div>
+                        </div>
+                        <div class="brow">
+                            <div class="bhead"><span>Druckbett</span><span class="val">55–60 °C</span></div>
+                            <div class="track">
+                                <div class="fill b" style="width:18.3%"></div>
+                                <div class="span b" style="left:18.3%;width:1.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grp">
+                        <div class="grp-name">PETG</div>
+                        <div class="brow">
+                            <div class="bhead"><span>Düse</span><span class="val">235–250 °C</span></div>
+                            <div class="track">
+                                <div class="fill d" style="width:78.3%"></div>
+                                <div class="span d" style="left:78.3%;width:5%"></div>
+                            </div>
+                        </div>
+                        <div class="brow">
+                            <div class="bhead"><span>Druckbett</span><span class="val">75–80 °C</span></div>
+                            <div class="track">
+                                <div class="fill b" style="width:25%"></div>
+                                <div class="span b" style="left:25%;width:1.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grp">
+                        <div class="grp-name">PETG-CF <span style="font-weight:400;color:var(--ink-3)">– Deins</span></div>
+                        <div class="brow">
+                            <div class="bhead"><span>Düse</span><span class="val">245–255 °C</span></div>
+                            <div class="track">
+                                <div class="fill d" style="width:81.7%"></div>
+                                <div class="span d" style="left:81.7%;width:3.3%"></div>
+                            </div>
+                        </div>
+                        <div class="brow">
+                            <div class="bhead"><span>Druckbett</span><span class="val">80–85 °C</span></div>
+                            <div class="track">
+                                <div class="fill b" style="width:26.7%"></div>
+                                <div class="span b" style="left:26.7%;width:1.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="axis" aria-hidden="true">
+                        <b style="left:0%">0 °C</b>
+                        <b style="left:33.3%">100</b>
+                        <b style="left:66.7%">200</b>
+                        <b style="left:100%">300</b>
+                    </div>
+                </div>
+                <figcaption>Der hellere Balkenteil zeigt den nutzbaren Bereich. Faustregel: Je heißer ein Material gedruckt werden muss, desto mehr Hitze hält es später auch aus.</figcaption>
+            </figure>
+
+            <div class="scroller">
+                <table>
+                    <caption>Wofür was?</caption>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Steif</th>
+                            <th>Zäh</th>
+                            <th>Hitze</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">PLA</th>
+                            <td class="dots">●●●<i>●●</i></td>
+                            <td class="dots">●<i>●●●●</i></td>
+                            <td class="dots">●<i>●●●●</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PLA-CF</th>
+                            <td class="dots">●●●●<i>●</i></td>
+                            <td class="dots">●<i>●●●●</i></td>
+                            <td class="dots">●●<i>●●●</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PETG</th>
+                            <td class="dots">●●●<i>●●</i></td>
+                            <td class="dots">●●●●●</td>
+                            <td class="dots">●●●●<i>●</i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PETG-CF</th>
+                            <td class="dots">●●●●●</td>
+                            <td class="dots">●●●<i>●●</i></td>
+                            <td class="dots">●●●●<i>●</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="sub" style="font-size:0.95rem"><strong>Steif</strong> = biegt sich nicht durch ·
+                <strong>Zäh</strong> = bricht nicht so leicht · <strong>Hitze</strong> = verträgt Wärme.
+                Mehr Punkte ist besser.</p>
+        </section>
+
+        <!-- ================= DÜSEN ================= -->
+        <section id="duesen" data-accent="nozzle">
+            <h2>Düsen: Messing oder Stahl</h2>
+
+            <p>Die Düse ist ein kleines Metallteil, kaum größer als eine Erbse, das man mit einem Schlüssel heraus- und
+                wieder hineindreht. Es gibt sie in zwei wichtigen Sorten.</p>
+
+            <div class="card">
+                <h3 style="color:var(--c-nozzle)">Messing – der Standard</h3>
+                <ul>
+                    <li>Leitet Wärme hervorragend: Der Kunststoff wird gleichmäßig heiß.</li>
+                    <li>Kostet wenig – ein, zwei Euro pro Stück.</li>
+                    <li>Ist aber <strong>weich</strong>.</li>
+                </ul>
+                <p class="sub">Für PLA und PETG ohne Fasern die erste Wahl. Hält jahrelang.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color:var(--ink)">Gehärteter Stahl – für alles mit Fasern</h3>
+                <ul>
+                    <li>Deutlich härter, hält Carbon problemlos aus.</li>
+                    <li>Leitet Wärme schlechter – man dreht die Temperatur ein paar Grad höher.</li>
+                    <li>Teurer, aber bei Fasern alternativlos.</li>
+                </ul>
+                <p class="sub">Kommt bei uns rein, sobald eine CF-Rolle drankommt.</p>
+            </div>
+
+            <figure>
+                <svg viewBox="0 0 400 312" role="img" aria-labelledby="svg2t" style="width:100%;height:auto">
+                    <title id="svg2t">Vergleich: neue scharfe Düsenöffnung gegenüber einer ausgeschmirgelten</title>
+                    <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif">
+                        <text x="92" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#14130f">Neu</text>
+                        <path d="M54 52 H130 L130 116 L110 164 L110 200 L74 200 L74 164 L54 116 Z" fill="#e7e5de"
+                            stroke="#14130f" stroke-width="3" stroke-linejoin="round" />
+                        <path d="M74 200 L74 164 L110 164 L110 200" fill="#ffffff" stroke="#14130f" stroke-width="3" />
+                        <text x="92" y="238" text-anchor="middle" font-size="17" fill="#4f4d46">scharfe 0,40 mm</text>
+
+                        <text x="308" y="30" text-anchor="middle" font-size="19" font-weight="700"
+                            fill="#14130f">Nach Carbon</text>
+                        <path d="M270 52 H346 L346 116 L326 164 L326 200 L290 200 L290 164 L270 116 Z" fill="#e7e5de"
+                            stroke="#14130f" stroke-width="3" stroke-linejoin="round" />
+                        <path d="M290 200 C289 184 285 172 278 166 L338 166 C331 172 327 184 326 200" fill="#fdf1ea"
+                            stroke="#eb6834" stroke-width="3" stroke-linejoin="round" />
+                        <text x="308" y="238" text-anchor="middle" font-size="17" fill="#eb6834">ausgefranst, 0,6 mm</text>
+
+                        <path d="M160 126 H240" stroke="#77746a" stroke-width="3" />
+                        <path d="M240 126 l-13 -8 v16 z" fill="#77746a" />
+
+                        <text x="200" y="278" text-anchor="middle" font-size="16" fill="#77746a">Ein paar hundert Gramm</text>
+                        <text x="200" y="300" text-anchor="middle" font-size="16" fill="#77746a">Carbon reichen dafür aus.</text>
+                    </g>
+                </svg>
+                <figcaption>Eine ausgeschmirgelte Düse legt breitere, ungenauere Linien. Das Teil wird unsauber – und
+                    man sucht den Fehler erst mal woanders.</figcaption>
+            </figure>
+
+            <div class="note">
+                <p><b>Der Merksatz</b>Carbon im Filament ist Schmirgelpapier in der Düse.</p>
+                <p>Mit Fasern zu drucken ist, als würde man Sand durch eine Messingöffnung pressen. Nach ein paar hundert
+                    Gramm ist aus den 0,4 mm still und leise 0,5 oder 0,6 mm geworden – und niemand weiß, warum die
+                    Drucke plötzlich schlechter aussehen. Deshalb: <strong>für CF immer die Stahldüse</strong>.</p>
+            </div>
+
+            <p class="sub">Kleine Randnotiz: Manche Düsen werden als „verschleißfestes Messing“ verkauft. Das ist
+                etwas besser als einfaches Messing, aber immer noch Messing. Gegen Carbon hilft nur echter gehärteter
+                Stahl.</p>
+        </section>
+
+        <!-- ================= ROLLEN ================= -->
+        <section id="rollen">
+            <h2>Unsere Rollen</h2>
+
+            <p>Das steht hier gerade im Regal:</p>
+
+            <ul class="spools">
+                <li>
+                    <span class="dot" style="background:#e8630a"></span>
+                    <span><span class="spool-t">PLA, orange</span><br><span class="spool-d">Der Allrounder. Zwei Rollen
+                            davon – das meiste Bunte ist daraus.</span></span>
+                </li>
+                <li>
+                    <span class="dot" style="background:#f4f4f1"></span>
+                    <span><span class="spool-t">PLA+, weiß</span><br><span class="spool-d">Zäher als normales PLA, sonst
+                            genauso gutmütig.</span></span>
+                </li>
+                <li>
+                    <span class="dot" style="background:#b62a25"></span>
+                    <span><span class="spool-t">PLA-CF, rot</span><br><span class="spool-d">Mit Carbon. Matt, steif,
+                            hübsche Oberfläche. Für Deko, die nach etwas aussehen soll.</span></span>
+                </li>
+                <li>
+                    <span class="dot" style="background:#1d1d1b"></span>
+                    <span><span class="spool-t">PETG, schwarz</span><br><span class="spool-d">Für alles, was halten
+                            muss.</span></span>
+                </li>
+                <li class="mine">
+                    <span class="dot" style="background:#1f4d38"></span>
+                    <span><span class="spool-t">PETG-CF, dunkelgrün</span><br><span class="spool-d">Die Rolle für Dein
+                            Teil.</span></span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= DEINS ================= -->
+        <section id="deins" data-accent="cf">
+            <h2>Dein Teil: PETG-CF</h2>
+
+            <p>Für etwas, das wirklich benutzt wird und nicht nur im Regal steht, ist PETG-CF die beste Wahl, die wir
+                hier haben:</p>
+
+            <ul>
+                <li><strong>Es hält Wärme aus.</strong> Sonne, Auto, Fensterbank, Heizung – alles kein Problem. PLA wäre
+                    da schon weich.</li>
+                <li><strong>Es ist steif.</strong> Das Carbon sorgt dafür, dass sich nichts durchbiegt, wo es nicht soll.</li>
+                <li><strong>Es bricht nicht gleich.</strong> PETG gibt nach, bevor es reißt – anders als sprödes PLA.</li>
+                <li><strong>Es bleibt in Form.</strong> Kein Verziehen, kein Schrumpfen. Was passen soll, passt auch in
+                    einem Jahr noch.</li>
+                <li><strong>Es sieht gut aus.</strong> Seidenmattes Dunkelgrün, die Druckschichten fallen kaum auf.</li>
+            </ul>
+
+            <p>Dafür läuft die Düse auf rund 250 °C, das Bett auf 80 °C, und vorher wird die gehärtete Stahldüse
+                eingeschraubt. Der Druck dauert entsprechend seine Zeit – aber dabei kannst Du ja gut zusehen.</p>
+        </section>
+
+        <!-- ================= SLA ================= -->
+        <section id="sla" data-accent="sla">
+            <h2>Noch ein Drucker: SLA / Resin</h2>
+
+            <p class="sub">Nicht der, dem Du zuschaust – aber der Vollständigkeit halber.</p>
+
+            <p>Hier gibt es keinen Draht und keine Düse. Stattdessen steht eine flache Wanne mit flüssigem Kunstharz
+                („Resin“) da. Darunter liegt ein Bildschirm, der UV-Licht abstrahlt. Wo das Licht hinfällt, härtet das
+                Harz in Sekunden aus.</p>
+
+            <p>Eine Platte taucht ein, der Bildschirm zeigt eine Schicht, das Harz härtet daran fest – dann hebt sich
+                die Platte ein winziges Stück und das Teil wächst kopfüber aus der Wanne heraus.</p>
+
+            <figure>
+                <svg viewBox="0 0 400 428" role="img" aria-labelledby="svg3t" style="width:100%;height:auto">
+                    <title id="svg3t">Vergleich: FDM legt Schichten mit einer Düse, SLA härtet Harz mit UV-Licht aus</title>
+                    <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif">
+                        <text x="200" y="28" text-anchor="middle" font-size="19" font-weight="700"
+                            fill="#14130f">FDM – unser Drucker</text>
+                        <path d="M126 50 L142 86 L158 50 Z" fill="#14130f" />
+                        <path d="M142 86 V106" stroke="#eb6834" stroke-width="4" stroke-linecap="round" />
+                        <rect x="72" y="106" width="140" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="72" y="118" width="116" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="72" y="130" width="94" height="10" rx="3" fill="#f7b79a" />
+                        <rect x="58" y="144" width="168" height="14" rx="4" fill="#2a78d6" />
+                        <text x="248" y="118" font-size="17" fill="#4f4d46">heißer Draht,</text>
+                        <text x="248" y="140" font-size="17" fill="#4f4d46">Lage für Lage</text>
+                        <text x="248" y="164" font-size="15" fill="#77746a">Schicht 0,2 mm</text>
+
+                        <path d="M24 196 H376" stroke="#e2e0da" stroke-width="2" />
+
+                        <text x="200" y="234" text-anchor="middle" font-size="19" font-weight="700"
+                            fill="#14130f">SLA – Harz</text>
+                        <rect x="154" y="252" width="92" height="12" rx="4" fill="#14130f" />
+                        <rect x="168" y="264" width="64" height="52" rx="3" fill="#e87ba4" />
+                        <rect x="92" y="306" width="216" height="46" fill="#fbe8ef" stroke="#14130f" stroke-width="3" />
+                        <rect x="92" y="352" width="216" height="12" fill="#4a3aa7" />
+                        <g stroke="#4a3aa7" stroke-width="3" stroke-linecap="round">
+                            <path d="M128 350 V318" />
+                            <path d="M164 350 V318" />
+                            <path d="M200 350 V318" />
+                            <path d="M236 350 V318" />
+                            <path d="M272 350 V318" />
+                        </g>
+                        <text x="200" y="392" text-anchor="middle" font-size="17" fill="#4f4d46">flüssiges Harz, von UV-Licht gehärtet</text>
+                        <text x="200" y="414" text-anchor="middle" font-size="15" fill="#77746a">Schicht 0,03 mm</text>
+                    </g>
+                </svg>
+                <figcaption>Der wesentliche Unterschied: FDM zieht Linien, SLA belichtet ganze Flächen auf einmal – und
+                    das zehnmal feiner.</figcaption>
+            </figure>
+
+            <h3>Wofür SLA gut ist</h3>
+            <ul>
+                <li><strong>Feinheit.</strong> Die Schichten sind rund zehnmal dünner. Man sieht sie praktisch nicht
+                    mehr.</li>
+                <li>Winzige Details: Figuren, Miniaturen, Schmuck, Modellbau.</li>
+                <li>Glatte Oberflächen ohne Nacharbeit.</li>
+            </ul>
+
+            <h3>Warum trotzdem meistens der andere läuft</h3>
+            <ul>
+                <li><strong>Sauerei.</strong> Das fertige Teil ist klebrig nass. Es muss in Alkohol gewaschen und danach
+                    unter UV-Licht nachgehärtet werden. Zwei Arbeitsschritte extra.</li>
+                <li><strong>Das Harz ist giftig</strong>, solange es flüssig ist – Handschuhe, gut lüften. Deshalb steht
+                    das Gerät nicht im Wohnzimmer.</li>
+                <li><strong>Spröde.</strong> Gehärtetes Harz bricht leichter als PETG und wird mit den Jahren im
+                    Sonnenlicht noch spröder. Für Funktionsteile ist es die schlechtere Wahl.</li>
+                <li>Kleiner Bauraum und teurer pro Teil.</li>
+            </ul>
+
+            <div class="note merk">
+                <p><b>Kurz gesagt</b>FDM ist die Heißklebepistole: robust, groß, unkompliziert. SLA ist das Fotolabor:
+                    wunderschön fein, aber es macht Arbeit und Dreck. Dein Teil kommt deshalb vom FDM-Drucker.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Geschrieben für Papa. Fragen jederzeit – am besten direkt beim Zuschauen.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
