@@ -502,6 +502,20 @@
             font-size: 0.92rem;
         }
 
+        .badge {
+            display: inline-block;
+            background: var(--c-pla);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 999px;
+            padding: 2px 9px;
+            margin-left: 6px;
+            vertical-align: 2px;
+        }
+
         .mine {
             background: #edf6ed;
             border-radius: var(--radius);
@@ -536,8 +550,7 @@
 
         <header>
             <h1>3D-Druck – kurz erklärt</h1>
-            <p class="lede">Was da eigentlich passiert, wenn Du mir beim Drucken zuschaust. Und warum Dein Teil aus der
-                dunkelgrünen Rolle kommt.</p>
+            <p class="lede">Was da eigentlich passiert, wenn Du mir beim Drucken zuschaust.</p>
         </header>
 
         <nav class="toc">
@@ -551,7 +564,7 @@
                 <li><a href="#temp">Temperaturen auf einen Blick</a></li>
                 <li><a href="#duesen">Düsen: Messing oder Stahl</a></li>
                 <li><a href="#rollen">Unsere Rollen</a></li>
-                <li><a href="#deins">Dein Teil: PETG-CF</a></li>
+                <li><a href="#deins">Für Dich geplant: PETG-CF</a></li>
                 <li><a href="#sla">Noch ein Drucker: SLA / Resin</a></li>
             </ol>
         </nav>
@@ -831,7 +844,7 @@
                     </div>
 
                     <div class="grp">
-                        <div class="grp-name">PETG-CF <span style="font-weight:400;color:var(--ink-3)">– Deins</span></div>
+                        <div class="grp-name">PETG-CF <span style="font-weight:400;color:var(--ink-3)">– für Dich geplant</span></div>
                         <div class="brow">
                             <div class="bhead"><span>Düse</span><span class="val">245–255 °C</span></div>
                             <div class="track">
@@ -974,18 +987,41 @@
         <section id="rollen">
             <h2>Unsere Rollen</h2>
 
-            <p>Das steht hier gerade im Regal:</p>
+            <h3>Da – und eine davon läuft gerade</h3>
+
+            <ul class="spools">
+                <li class="mine">
+                    <span class="dot" style="background:#2b2b28"></span>
+                    <span><span class="spool-t">PLA Matte, schwarz <span class="badge">eingelegt</span></span><br><span
+                            class="spool-d">Das, was Du gerade laufen siehst. „Matt“ heißt: kein Glanz, dafür sieht man
+                            die Schichten kaum.</span></span>
+                </li>
+                <li>
+                    <span class="dot" style="background:#c0392b"></span>
+                    <span><span class="spool-t">PLA+, rot</span><br><span class="spool-d">Zäher als normales PLA, sonst
+                            genauso gutmütig.</span></span>
+                </li>
+                <li>
+                    <span class="dot" style="background:#f4f4f1"></span>
+                    <span><span class="spool-t">TPU, weiß</span><br><span class="spool-d">Das Gummi unter den
+                            Filamenten: biegsam, man kann es zusammendrücken. Für Dichtungen, Puffer, Griffe. Druckt
+                            sich langsam und zickig – ein weicher Faden lässt sich durch den Bowden-Schlauch schlecht
+                            schieben.</span></span>
+                </li>
+            </ul>
+
+            <h3>Bestellt, noch unterwegs</h3>
 
             <ul class="spools">
                 <li>
                     <span class="dot" style="background:#e8630a"></span>
                     <span><span class="spool-t">PLA, orange</span><br><span class="spool-d">Der Allrounder. Zwei Rollen
-                            davon – das meiste Bunte ist daraus.</span></span>
+                            davon.</span></span>
                 </li>
                 <li>
                     <span class="dot" style="background:#f4f4f1"></span>
-                    <span><span class="spool-t">PLA+, weiß</span><br><span class="spool-d">Zäher als normales PLA, sonst
-                            genauso gutmütig.</span></span>
+                    <span><span class="spool-t">PLA+, weiß</span><br><span class="spool-d">Wie das rote, nur in
+                            weiß.</span></span>
                 </li>
                 <li>
                     <span class="dot" style="background:#b62a25"></span>
@@ -997,20 +1033,20 @@
                     <span><span class="spool-t">PETG, schwarz</span><br><span class="spool-d">Für alles, was halten
                             muss.</span></span>
                 </li>
-                <li class="mine">
+                <li>
                     <span class="dot" style="background:#1f4d38"></span>
-                    <span><span class="spool-t">PETG-CF, dunkelgrün</span><br><span class="spool-d">Die Rolle für Dein
-                            Teil.</span></span>
+                    <span><span class="spool-t">PETG-CF, dunkelgrün</span><br><span class="spool-d">Die Rolle, aus der
+                            später einmal etwas für Dich werden soll.</span></span>
                 </li>
             </ul>
         </section>
 
         <!-- ================= DEINS ================= -->
         <section id="deins" data-accent="cf">
-            <h2>Dein Teil: PETG-CF</h2>
+            <h2>Für Dich geplant: PETG-CF</h2>
 
-            <p>Für etwas, das wirklich benutzt wird und nicht nur im Regal steht, ist PETG-CF die beste Wahl, die wir
-                hier haben:</p>
+            <p>Gedruckt ist es noch nicht – die Rolle ist bestellt. Aber für etwas, das wirklich benutzt wird und nicht
+                nur im Regal steht, ist PETG-CF die beste Wahl:</p>
 
             <ul>
                 <li><strong>Es hält Wärme aus.</strong> Sonne, Auto, Fensterbank, Heizung – alles kein Problem. PLA wäre
